@@ -1,0 +1,618 @@
+﻿.coupon-modal-showPrize {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.65)
+}
+
+.coupon-modal-showPrize .close {
+    position: absolute;
+    top: .59733333rem;
+    right: .21333333rem;
+    z-index: 10002;
+    width: .3rem;
+    height: .3rem;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/301001/img/close1.png);
+    background-size: 100% 100%;
+    opacity: 0;
+    -webkit-animation: showClose 1s .5s linear forwards;
+    animation: showClose 1s .5s linear forwards
+}
+
+.coupon-modal-showPrize-dialog {
+    display: none;
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 4.096rem;
+    margin-left: -50%;
+    -webkit-animation: showModal .5s ease-in-out;
+    animation: showModal .5s ease-in-out
+}
+.showModal1 .coupon-modal-showPrize-dialog {
+    -webkit-animation: 0.5s  showModal1 0.4s linear 1;
+    animation: 0.5s  showModal1 0.4s linear 1;
+	-webkit-transform: rotateY(-90deg);
+	transform: rotateY(-90deg);
+	-webkit-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;	
+}
+.showModal1.coupon-modal-showPrize { background-color: rgba(0,0,0,0); }
+
+
+.coupon-modal-showPrize-dialog .modal-header {
+    position: relative
+}
+
+.coupon-modal-showPrize-dialog .modal-body {
+    position: absolute;
+    left: 50%;
+    z-index: 888;
+    border-radius: .08533333rem;
+    width: 100%;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    height: 100%
+}
+
+.coupon-modal-showPrize-dialog .coupon-wrapper {
+    position: absolute;
+    bottom: 1.17rem;
+    left: 50%;
+    z-index: 22;
+    width: 2.3rem;
+    height: 1.48rem;
+    padding: 0;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/301001/img/bg-back.png);
+    background-size: 100% 100%;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+}
+
+.coupon-modal-showPrize-dialog .coupon-image {
+    position: relative;
+    width: 2.15rem;
+    height: 1.03rem;
+    margin: 0.33rem auto;
+    overflow: hidden;
+    border-radius: .04266667rem;
+}
+
+.coupon-modal-showPrize-dialog .coupon-image img {
+    width: 100%;
+    height: 100%
+}
+
+.coupon-modal-showPrize-dialog .body-header {
+    height: 3rem;
+    width: 2.5rem;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/301001/img/prize-bg2.png);
+    background-size: 100% 100%;
+    margin: 0.8rem auto 0
+}
+
+.coupon-modal-showPrize-dialog .body-footer {
+    position: relative;
+    z-index: 33;
+    width: 2.48rem;
+    height: 1rem;
+    box-sizing: border-box;
+    top: -1.15rem;
+    margin: 0 auto;
+    background-size: 100% 100%;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-name span {
+    margin: .11093333rem auto 0;
+    display: inline-block;
+    border-radius: .04266667rem;
+    font-size: .1024rem;
+    font-weight: 400;
+    line-height: 1;
+    background-color: #e4331c;
+    text-align: center;
+    padding: .04266667rem .13653333rem;
+    letter-spacing: .01706667rem;
+    color: #ffde45
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-code {
+    margin-top: .1024rem;
+    padding: 0 .1024rem
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-code p.code {
+    display: inline-block;
+    width: 49%;
+    font-size: .09386667rem;
+    color: #ffe4e1;
+    text-align: center
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-code p.code span {
+    margin-right: .01706667rem
+}
+
+.coupon-modal-showPrize-dialog .body-footer a {
+    display: block;
+    width: 100%;
+    margin-top: -.04266667rem;
+    line-height: .21333333rem;
+    color: #fff;
+    text-align: center
+}
+
+.coupon-modal-showPrize-dialog .body-footer a span {
+    margin-left: .01706667rem
+}
+
+.coupon-modal-showPrize-dialog .coupon-use {
+    display: block;
+    width:  1.52rem;
+    height: .5rem;
+    margin: .4rem auto 0;
+    font-size: .15rem;
+    font-weight: 700;
+    color: #e42410;
+    background-color: transparent;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/301001/img/button.png);
+    background-size: 100% 100%
+}
+
+.coupon-modal-showPrize-dialog .coupon-use[disabled] {
+    font-size: .128rem;
+    font-weight: 400;
+    color: #fff;
+    background: -webkit-linear-gradient(top,#ccc,#ccc);
+    background: linear-gradient(to bottom,#ccc,#ccc);
+    background-color: #ccc
+}
+
+.coupon-modal-showPrize-dialog .coupon-use[disabled]>* {
+    vertical-align: middle
+}
+
+.coupon-modal-showPrize-dialog .coupon-use span {
+    position: relative;
+    display: inline-block;
+    font-size: .15rem;
+}
+
+.coupon-modal-showPrize-dialog .decoration {
+    position: absolute;
+    top: 1.05rem;
+    z-index: 999;
+    display: block;
+    width: 3.2rem;
+    height: 1.85rem;
+    pointer-events: none;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/301001/img/light3.png);
+    background-size: 100% 100%;
+    -webkit-animation: showRedpacks .5s .5s;
+    animation: showRedpacks .5s .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    left: 50%;
+    margin-left: -1.6rem;
+}
+
+.l-shine,.modal-light {
+    position: absolute;
+    left: 50%
+}
+
+.modal-light {
+    top: 1.2rem;
+    z-index: 100;
+    display: inline-block;
+    width: .68266667rem;
+    height: .34133333rem;
+    /* background-color: #ff8a2c; */
+    /* border-radius: 50%;
+    box-shadow: 0 0 1.024rem .59733333rem #e88f47; */
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    -webkit-animation: showLightBg 1s linear 1;
+    animation: showLightBg 1s linear 1
+}
+.l-shine {
+    top: -1.5rem;
+    z-index: 101;
+    width: 3.28533333rem;
+    height: 3.28533333rem;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/301001/img/redpacks1.png);
+    background-size: 100% 100%;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    -webkit-animation: showLight 1s linear 1,lightRound 18s linear 1s infinite;
+    animation: showLight 1s linear 1,lightRound 18s linear 1s infinite
+}
+.gift{
+    width:100%;
+    height:100%;
+    position: absolute;
+}
+.gift-shine {
+    z-index: 101;
+    width: 3.28533333rem;
+    height: 3.28533333rem;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/301001/img/redpacks1.png);
+    background-size: 100% 100%;
+    /* -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);*/ 
+    transform-origin:50% 50%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    animation: giftwrap 0.5s ease-in-out;
+    animation-delay: 1s;
+}
+.gift-wrap{
+    width:100%;
+    height:100%;
+    animation: giftwrap 0.5s ease-in-out;
+    animation-delay:1s;
+}
+@keyframes giftwrap{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+    }
+}
+.gift-bag{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:2.62rem;
+    height:2.65rem;
+    background: url(http://mdcdn.kuaiyou.com/interactionMedia/games/301001/img/light-2.png) no-repeat 100% 100%;
+    background-size:cover;
+    animation: gift-bag 1s linear;
+    transform-origin:center center;
+}
+@keyframes gift-bag{
+    from {
+        -webkit-transform: translate(-50%,-50%) rotate(0);
+        transform: translate(-50%,-50%) rotate(0);
+    }
+
+    to {
+        -webkit-transform:  translate(-50%,-50%) rotate(720deg);
+        transform:  translate(-50%,-50%) rotate(720deg);
+    }
+}
+.giftbg{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background: url(http://mdcdn.kuaiyou.com/interactionMedia/games/301001/img/big-record-5.png) no-repeat 100% 100%;
+    background-size:cover;
+    width:1.49rem;
+    height:1.54rem;
+    z-index: 40;
+}
+/* 手指 */
+.hand{
+    position: absolute;
+    bottom: 0.65rem;
+    right: 0.65rem;
+    pointer-events: none;
+}
+.handa{
+    width: 0.2rem;
+    height: 0.2rem;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/301001/img/hand2.png);
+    background-size: 100% 100%;
+    -webkit-animation: guidCircle 1.5s linear infinite normal;
+    animation: guidCircle 1.5s linear infinite normal;
+}
+.handb{
+    width: 0.7rem;
+    height: 0.7rem;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/301001/img/hand1.png);
+    background-size: 100% 200%;
+    background-position:100% 0;
+    position: absolute;
+    top: -0.05rem;
+    left:0;
+    -webkit-animation: guideHand2 .5s step-start infinite;
+    animation: guideHand2 .5s step-start infinite;
+}
+@-webkit-keyframes guidCircle{
+    0%, 20% {
+        opacity: 0;
+        -webkit-transform: scale(0,0);
+        transform: scale(0,0);
+    }
+    50%, 80% {
+        opacity: 1;
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1);
+    }
+}
+@keyframes guidCircle{
+    0%, 20% {
+        opacity: 0;
+        -webkit-transform: scale(0,0);
+        transform: scale(0,0);
+    }
+    50%, 80% {
+        opacity: 1;
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1);
+    }
+}
+@-webkit-keyframes guideHand2{
+    0%{
+        background-position: 100% 0%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+}
+@keyframes guideHand2{
+    0%{
+        background-position: 100% 0%;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+}
+@-webkit-keyframes goRound {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes goRound {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes showModal {
+    from {
+        -webkit-transform: scale(.1);
+        transform: scale(.1)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes showModal {
+    from {
+        -webkit-transform: scale(.1);
+        transform: scale(.1)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@-webkit-keyframes showModal1 {
+    from {
+		 -webkit-transform: rotateY(-90deg);
+		transform: rotateY(-90deg);
+    }
+
+    to {
+       -webkit-transform: rotateY(0deg);
+		transform: rotateY(0deg); 
+    }
+}
+
+@keyframes showModal1 {
+    from {
+		 -webkit-transform: rotateY(-90deg);
+		transform: rotateY(-90deg);
+    }
+
+    to {
+       -webkit-transform: rotateY(0deg);
+		transform: rotateY(0deg); 
+    }
+}
+
+@-webkit-keyframes showCoupon {
+    from {
+        bottom: 0.35rem;
+    }
+
+    to {
+        bottom: 1.5rem
+    }
+}
+
+@keyframes showCoupon {
+    from {
+        bottom: 0.35rem;
+    }
+
+    to {
+        bottom: 1.5rem
+    }
+}
+
+@-webkit-keyframes showCoupon1 {
+    from {
+        bottom: 1.5rem;
+    }
+
+    to {
+        bottom: 2.5rem
+    }
+}
+
+@keyframes showCoupon1 {
+    from {
+        bottom: 1.5rem
+    }
+
+    to {
+        bottom: 2.5rem
+    }
+}
+
+@-webkit-keyframes lightRound {
+    from {
+        -webkit-transform: translate(-50%,0) rotate(0);
+        transform: translate(-50%,0) rotate(0)
+    }
+
+    to {
+        -webkit-transform: translate(-50%,0) rotate(360deg);
+        transform: translate(-50%,0) rotate(360deg)
+    }
+}
+
+@keyframes lightRound {
+    from {
+        -webkit-transform: translate(-50%,0) rotate(0);
+        transform: translate(-50%,0) rotate(0)
+    }
+
+    to {
+        -webkit-transform: translate(-50%,0) rotate(360deg);
+        transform: translate(-50%,0) rotate(360deg)
+    }
+}
+
+@-webkit-keyframes showLight {
+    from {
+        top: .256rem;
+        width: 0;
+        height: 0
+    }
+
+    to {
+        top: -.85333333rem;
+        width: 3.28533333rem;
+        height: 3.28533333rem
+    }
+}
+
+@keyframes showLight {
+    from {
+        top: .256rem;
+        width: 0;
+        height: 0
+    }
+
+    to {
+        top: -.85333333rem;
+        width: 3.28533333rem;
+        height: 3.28533333rem
+    }
+}
+
+@-webkit-keyframes showLightBg {
+    from {
+        top: 2.56rem;
+        width: 0;
+        height: 0
+    }
+
+    to {
+        top: 1.536rem;
+        width: .68266667rem;
+        height: .34133333rem
+    }
+}
+
+@keyframes showLightBg {
+    from {
+        top: 2.56rem;
+        width: 0;
+        height: 0
+    }
+
+    to {
+        top: 1.536rem;
+        width: .68266667rem;
+        height: .34133333rem
+    }
+}
+
+@-webkit-keyframes showClose {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes showClose {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes showRedpacks {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes showRedpacks {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}

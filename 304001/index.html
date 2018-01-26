@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no" />
+<title>大转盘</title>
+<script src="../publicjs/resize_init.js"></script>
+<link rel="stylesheet" href="../css/publiccss/common.css" />
+<link rel="stylesheet" href="css/index_rotateTable.css"/>
+<link rel="stylesheet" href="css/award1.css"/>
+</head>
+<body>
+	<div id="db-content" style="display: block;">
+		<a class="record" href="javascript:;" onclick="seeShopingList();"></a>
+		<div class="rule"></div>
+		<div class="bg-qiu"></div>
+		<div class="bg-qiu2"></div>
+		<div class="seat"></div>
+		<div class="banner">
+			<img class="theme" src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/banner.png">
+		</div>
+		<div class="core">
+			<div class="core-overflow">
+				<div class="turntable-border"></div>
+				<div class="radius"></div>
+				<div class="radius-group default"></div>
+				<div id="circle">
+					<div class="circle-box" id="circle-box">
+						<div class="prize" data-index="0" data-id="13958" data-type="physical" data-detail-id="0">
+							<div class="prize-dialog">
+								<!-- <p>特等奖奖品</p> -->
+								<img src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-7.png" class="etcprize"/>
+								<img src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-1.png" alt="" class="diasmall">
+							</div>
+						</div>
+						<div class="prize thanks" data-index="1" data-id="13959" data-type="thanks">
+							<div class="prize-dialog">
+								<img src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-15.png" class="etcprize"/>
+								<img src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-6.png" alt="">
+							</div>
+						</div>
+						<div class="prize" data-index="2" data-id="13960" data-type="physical" data-detail-id="1">
+							<div class="prize-dialog">
+								<img src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-8.png" class="etcprize"/>
+								<img src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-2.png" alt="" class="diasmall">
+							</div>
+						</div>
+						<div class="prize" data-index="3" data-id="13961" data-type="physical" data-detail-id="3">
+							<div class="prize-dialog">
+								<img src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-10.png" class="etcprize"/>
+								<img src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-4.png" alt="" class="diasmall">
+							</div>
+						</div>
+						<div class="prize" data-index="4" data-id="13962" data-type="physical" data-detail-id="2">
+							<div class="prize-dialog">
+								<img src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-9.png" class="etcprize"/>
+								<img src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-3.png" alt="" class="diasmall">
+							</div>
+						</div>
+						<div class="prize thanks" data-index="5" data-id="13963" data-type="lucky">
+							<div class="prize-dialog">
+								<img src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-12.png" class="etcprize"/>
+								<img src="http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-5.png" alt="" class="diasmall">
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div id="start"></div>
+			</div>
+		</div>
+
+		<div class="needCredits" id="needCredits">
+			<p></p>
+		</div>
+		
+	</div>
+
+
+	<!--奖品-->
+	<div class="J_modalShowPrize coupon-modal-showPrize" style="display: none;">
+		<div class="coupon-modal-showPrize-dialog">
+			<span class="close coupon-modal-close"></span>
+			<div class="modal-light">
+	            <div class="l-shine"></div>
+	        </div>
+			<div class="modal-header"></div>
+			<div class="modal-body withoutCode">
+				<div class="body-header"></div>
+				<div class="coupon-wrapper">
+					<div class="coupon-image">
+						<img class="J_gotoDetail logandgo">
+					</div>
+				</div>
+				<div class="body-footer">
+					<span class="coupon-win"></span>
+					<button type="button" class="J_btnCoupon coupon-use">
+						<span></span>
+					</button>
+				</div>
+			</div>
+			<i class="decoration"></i>
+		</div>
+	</div>
+	<!--设备达到点击次数后弹出跳转框，可切换游戏-->
+	<div id="recommend-modal" class="recommend-modal" style="display: none;">
+		<div class="recommend-modal-dialog">
+			<i class="close"></i>
+			<div class="recommend-body1">
+				<a class="fuli" href=""></a> 
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../publicjs/jquery.min.js"></script>
+	<script type="text/javascript" src="../publicjs/jquery.cookie.js"></script> 
+	<script type="text/javascript" src="../publicjs/jQueryRotate.2.2.js"></script>
+	<script type="text/javascript" src="../publicjs/iscroll.js"></script>
+	<!-- 加载公用js-->
+	<script type="text/javascript" src="../publicjs/game.js"></script>
+	<script type="text/javascript" src="../publicjs/alitest.js"></script>
+	<script src="../component/rule/createrule.js"></script>
+	<script src="../component/thanks/createthanks.js"></script>
+	<script type="text/javascript">
+	//返回广告数据模拟
+	var data = {'id':101,'leftTimes':1,'success':true,data:{
+    "clkTrakings": [
+    "http:\/\/test2014.adview.cn:8088\/agent\/click?st=&uuidEncType=0&sv=&src=1&sy=1&nt=&adi=20170915-100522_h7WkUdcb_1-254-5np5-1_1&bi=com.test&ai=j4hIg14BAAAeIwpUQCUoJ76cNlUQfatSioQPSmUZ3Et5F5xZhljVcxjhhhtenWvEQxu7cxN8dmxGf8Qf2XrJLs1QMtorCcEFQ2CROUtZ-PYVcRY350gj4ZQfsO8DUtsJ_GxZrj714-CINmauq4g4Sf1IXG8VqbDTEeuDlVGVc7Tay_D46oRvgMM9qVh94oA&ud=726E3808-134A-43AC-9607-E43876EA487B&as=&se=&cv=&rqt=6&ti=1505441127&tm=0&to=b8996008031c1deb116402d5e604f760&aid=SDK20150921090557wlj7sksdgdg860h&ro=1&ca=0"
+  ],
+  "detailDesc": "<div><strong><strong><img src=\"\/\/yun.duiba.com.cn \/tuia\/img\/rg0it6kr56.jpg\"\/><br\/><\/strong><\/strong><h3><strong>使用流程<\/strong><\/h3><ol class=\" list-paddingleft-2\"><li><p>点击马上使用，进入产品订购页面，点击立即抢购<\/p><\/li><li><p>选择产品，正确填写收货信息，提交订单（错误地址将导致发货失败）<\/p><\/li><li><p>新增的<br\/><\/p><\/li><\/ol><h3><strong>使用规则<\/strong><br\/><\/h3><ul class=\" list-paddingleft-2\"><li><p>仅限新用户兑换使用一次，不可与其他优惠叠加使用<\/p><\/li><li><p>如有商品详情咨询，下单流程，发货，售前\/售后服务等问题，请致电商家客服电话：4009260511<\/p><\/li><li><p>如有券码问题，可直接联系客服专线：400-080-6659或客服QQ：4000806659 （工作日9:30至18:30）<\/p><\/li><\/ul><\/div>",
+  "buttonText": "现在领取",
+  "impTrakings": [   "http:\/\/test2014.adview.cn:8088\/agent\/display?st=&uuidEncType=0&sv=&src=1&sy=1&nt=&adi=20170915-100522_h7WkUdcb_1-254-5np5-1_1&bi=com.test&ai=j4hIg14BAAAeIwpUQCUoJ76cNlUQfatSioQPSmUZ3Et5F5xZhljVcxjhhhtenWvEQxu7cxN8dmxGf8Qf2XrJLs1QMtorCcEFQ2CROUtZ-PYVcRY350gj4ZQfsO8DUtsJ_GxZrj714-CINmauq4g4Sf1IXG8VqbDTEeuDlVGVc7Tay_D46oRvgMM9qVh94oA&ud=726E3808-134A-43AC-9607-E43876EA487B&as=&se=&cv=&rqt=6&ti=1505441127&tm=0&to=b8996008031c1deb116402d5e604f760&aid=SDK20150921090557wlj7sksdgdg860h&ro=1&ca=0"
+  ],
+  "endUrl": "http://www.adview.com",
+  "success": true,
+  "detailImg": "http:\/\/test2014.adview.cn:8088\/h7wkudcb20170912133735335000_640_300.gif",
+  "icon": "http:\/\/test2014.adview.cn:8088\/h7wkudcb20170912133730786000_225_140.png",
+  "popImg": "../img/ad.png",
+  "title": "测试标题"
+  }};
+	/** 查找谢谢参与的位置，旋转到该位置*/
+	var thanksIndex = $("#circle-box").find("[data-type=thanks]").data("index");
+	var thanksDeg = 60 * (5 - thanksIndex) + 30;
+	console.log(thanksDeg)
+	/** 是否还有游戏次数，isRender:true|false，是否执行renderElement ,running：false|true 动画状态 */
+	var hasNoTimes = false, isRender, running = false;
+		/** 页面动画初始化，获取规则，渲染游戏次数  */
+		$(function() {
+			reset();
+			getInfo(data,304001);
+			getRule(); 
+		});
+
+
+		/** 点击抽奖 */
+		$("#start").click(function(){
+		    $('.DB_guide').hide();
+		    /** 转盘快速转动,取广告  */
+		   running ||( hasNoTimes ? showModal("recommend-modal") : (rotateStart(),getResult()));
+		});
+
+		/** leftTimes=-1，表示不限游戏次数 */
+		function renderElement(leftTimes,flag){
+			$(".needCredits p").html((leftTimes==-1) ? '不限次数': 
+			(leftTimes ? "<span id='leftTime'>" + leftTimes + "</span>": "0")).show();
+			(leftTimes==-1) ? hasNoTimes = !1 : (leftTimes ? hasNoTimes = !1 : (hasNoTimes = !0, flag == true ? showModal('recommend-modal') : 1));
+			(leftTimes==-1) ? isRender = false : isRender = true;
+		}
+		
+		/** 获取广告 */
+		function getResult(){
+			var url = getCreative();
+			if(url=="thanks"){
+			   	data.id="13959";
+			   	data.success=false;
+			}
+		    var result = data;
+		    //** 没有取到广告，定位到谢谢参与 /
+			if(!result.success){
+				result["id"] = 13959;
+				rotateFn(result);
+			//取到广告，定位幸运福袋
+			}else{
+				result["id"] = 13963;
+				if(result.success == true){
+				   setTimeout(function() { 
+					   rotateFn(result);
+				   },500);
+				}
+			}
+			
+		}
+		
+		function rotateFn(result){
+				var s;
+				$("#circle .prize").each(function(e, o) {
+				    /** 转盘定位幸运福袋 */
+					if ($(this).data("id") == result.id) return void(s = 60 * (5 - $(this).data("index")) + 30)
+				}),
+				s += 360,
+				setTimeout(function() {
+					$("#circle").stopRotate(),
+					$("#circle").rotate({
+						angle: getRotateAngle(),
+						animateTo: s,
+						duration: 1 * 1300,
+						easing: function(t, i, e, s, o) {
+							return - s * ((i = i / o - 1) * i * i * i - 1) + e
+						},
+						callback: function() {
+							clearTimeout(window.lightTimer),
+							$(".radius-group").addClass("end"),
+							setTimeout(function() {
+								if(result.success){
+									var data = result.data;
+									/** 奖品 */
+									//$(".J_modalShowPrize .J_gotoDetail").attr("src",data.popImg);
+									//var url = getCreative();
+									$(".J_modalShowPrize .coupon-name span").html(data.title);
+									//$(".J_modalShowPrize .coupon-use span").html(data.buttonText);
+									$(".J_modalShowPrize").show();
+									//result.leftTimes--;
+									if(isRender){
+										renderElement(result.leftTimes,false);
+									}
+									
+									/** 展示汇报 */
+								    if($("[datatype='display']").length){ 
+								    	$("[datatype='display']").remove(); 
+								    }
+									for(var i=0 ; i < data.impTrakings.length ; i++){
+										$("<iframe>", {
+											src: data.impTrakings[i],
+											dataType:'display'
+										}).appendTo("body");
+									}
+									$("[datatype='display']").hide();
+									console.log("展示曝光");
+									
+
+								}else{
+									/** 没有取到广告，显示谢谢参与  */
+									showModal("thanks");
+
+									if(isRender){
+										renderElement(result.leftTimes,false);
+									}
+								}
+								
+							},300);
+						}
+					})
+				},500);result.leftTimes--;
+		}
+		
+		function rotateStart(){
+			running = true;
+			$("#start").addClass("disabled"),
+			$("#circle").stopRotate(),
+			$("#circle").rotate({
+				angle: getRotateAngle(),
+				animateTo: 7200,
+				duration: 20 * 1300,
+				easing: function(t, i, e, s, o) {
+					return i
+				},
+				callback: function() {
+				    /** 动画完成时执行的回调函数，网络出错 */
+					//showModal("thanks");
+					reset();
+				}
+			})
+		}
+		
+		function getRotateAngle() {
+		      return $("#circle").getRotateAngle() % 60;
+		}
+		
+		function reset(){
+			running = false;
+		    $("#start").removeClass("disabled");
+			$("#circle").rotate(thanksDeg);
+			$("#circle").rotate({
+				angle: 60 * (5 - thanksIndex) + 30,
+				animateTo: 3600,
+				duration: 3e6,
+				easing: function(t, i, e, s, o) {
+					return - s * ((i = i / o - 1) * i * i * i - 1) + e
+				}
+			});
+			 /** 转盘小圆点动画 */
+		     toggleLight();
+			 $(".radius-group").removeClass("end");
+		}
+		
+		function toggleLight() {
+			window.lightTimer = setTimeout(function() {
+				$(".radius-group").toggleClass("toggle");
+				toggleLight();
+			},500);
+		};
+		
+		/** 关闭奖品弹框按钮 */
+		$(".J_modalShowPrize .coupon-modal-close").on("click", function() {
+			document.touchmove = null;
+			$(".J_modalShowPrize").hide();
+			reset();
+		});
+		
+		bottomTip();
+
+</script>
+</body>
+</html>
+

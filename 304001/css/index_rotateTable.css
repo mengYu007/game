@@ -1,0 +1,739 @@
+/*  页面整体布局  */
+
+@charset "utf-8";
+
+*,a:active {
+    outline: 0
+}
+
+body,input {
+    width: 100%
+}
+
+.placeholder,button,html,input,textarea {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif
+}
+
+#start span,b,strong {
+    font-weight: 700
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased
+}
+
+body {
+    line-height: 1;
+    overflow-x: hidden;
+    max-width: 640px;
+    margin: 0 auto;
+    color: #333;
+    background-color: #f0f0f0;
+    -webkit-overflow-scrolling: touch;
+    -webkit-touch-callout: none;
+    font-size: .12rem
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
+    display: block
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+dfn {
+    font-style: normal
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0
+}
+
+button,input,textarea {
+    font-size: .12rem;
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+textarea {
+    resize: none
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse
+}
+
+td,th {
+    padding: 0
+}
+
+blockquote,figure,form,h1,h2,h3,h4,h5,h6,p {
+    margin: 0
+}
+
+dd,dl,li,ol,ul {
+    margin: 0;
+    padding: 0
+}
+
+li,ol,ul {
+    list-style: none
+}
+
+input {
+    height: .34rem;
+    padding: 0 .1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: .04rem
+}
+
+.placeholder {
+    text-align: left;
+    color: #999
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input:-moz-placeholder :-moz-placeholder,
+textarea:-moz-placeholder :-moz-placeholder,
+input:-moz-placeholder ::-webkit-input-placeholder,
+textarea:-moz-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    opacity: 1;
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input::-moz-placeholder :-moz-placeholder,
+textarea::-moz-placeholder :-moz-placeholder,
+input::-moz-placeholder ::-webkit-input-placeholder,
+textarea::-moz-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+input:-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input:-ms-input-placeholder :-moz-placeholder,
+textarea::-ms-input-placeholder :-moz-placeholder,
+input:-ms-input-placeholder ::-webkit-input-placeholder,
+textarea::-ms-input-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+#start span,.apple,.myCredits,.needCredits {
+    text-align: center
+}
+
+input::-webkit-input-placeholder :-moz-placeholder,
+textarea::-webkit-input-placeholder :-moz-placeholder,
+input::-webkit-input-placeholder ::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+.hidden {
+    display: none!important;
+    visibility: hidden!important
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.DB_guide {
+    position: absolute;
+    z-index: 100;
+    display: none;
+    pointer-events: none
+}
+
+.DB_guide .DB_G_circle,.DB_guide .DB_G_hand {
+    position: absolute;
+    display: inline-block;
+    background-repeat: no-repeat
+}
+
+.DB_guide .DB_G_circle {
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/small_circle.png);
+    background-size: 100% 100%;
+    width: .3rem;
+    height: .3rem;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    -webkit-animation: guidCircle 1.5s linear infinite normal;
+    animation: guidCircle 1.5s linear infinite normal
+}
+
+.DB_guide .DB_G_hand {
+    width: .89rem;
+    height: .94rem;
+    left: .1rem;
+    top: .05rem;
+    background-image: url("http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/hand.png");
+    -webkit-animation: guideHand2 .5s step-start infinite;
+    animation: guideHand2 .5s step-start infinite;
+    background-size: cover
+}
+
+@-webkit-keyframes guideHand {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1)
+    }
+
+    20%,80% {
+        opacity: 1;
+        -webkit-transform: scale(.8,.8);
+        transform: scale(.8,.8)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(.8,.8);
+        transform: scale(.8,.8)
+    }
+}
+
+@keyframes guideHand {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1)
+    }
+
+    20%,80% {
+        opacity: 1;
+        -webkit-transform: scale(.8,.8);
+        transform: scale(.8,.8)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(.8,.8);
+        transform: scale(.8,.8)
+    }
+}
+
+@-webkit-keyframes guideHand2 {
+    0% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: -.89rem 0
+    }
+}
+
+@keyframes guideHand2 {
+    0% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: -.89rem 0
+    }
+}
+
+@-webkit-keyframes guidCircle {
+    0%,20% {
+        opacity: 0;
+        -webkit-transform: scale(0,0);
+        transform: scale(0,0)
+    }
+
+    50%,80% {
+        opacity: 1;
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1)
+    }
+}
+
+@keyframes guidCircle {
+    0%,20% {
+        opacity: 0;
+        -webkit-transform: scale(0,0);
+        transform: scale(0,0)
+    }
+
+    50%,80% {
+        opacity: 1;
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1,1);
+        transform: scale(1,1)
+    }
+}
+
+.clearfix {
+    display: table;
+    clear: both;
+    content: ''
+}
+
+#db-content {
+    position: relative;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 5.2rem;
+}
+#circle,#start,.point,.radius-group,.record,.rule,.radius {
+    background-size: 100% 100%
+}
+
+.record {
+    position: absolute;
+    bottom: 0.15rem;
+    right: 0.15rem;
+    display: block;
+    width: 1.38rem;
+    height: 0.34rem;
+    z-index: 10;
+}
+.bg-qiu{
+        background: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/bg-1.png) no-repeat;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-size: cover;
+    position: absolute;
+    top: 1rem;
+    left: 0.1rem;
+    z-index: 40;
+    animation: bg-qiu 4.5s linear infinite;
+}
+@keyframes bg-qiu{
+    0%{top:1rem;}
+    50%{top:0.7rem;}
+    100%{top:1rem;}
+}
+.bg-qiu2{
+    background: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/bg-2.png) no-repeat;
+    width: 0.35rem;
+    height: 0.4rem;
+    background-size: cover;
+    position: absolute;
+    top: 0.6rem;
+    right: 0;
+    z-index: 40;
+    animation: bg-qiu2 3s linear infinite;
+}
+@keyframes bg-qiu2{
+    0%{top:0.6rem;}
+    50%{top:0.4rem;}
+    100%{top:0.6rem;}
+}
+.seat{
+    width: 2rem;
+    height: 1rem;
+    background: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/bg-4.png) no-repeat 100% 100%;
+    background-size: contain;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.banner,.core,.core-overflow {
+    position: relative
+}
+
+.banner {
+    height: 1.1rem;
+    margin-bottom: .05rem;
+    padding-top: 0.2rem;
+	/*background: url(../http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/banner.png) no-repeat center 0.2rem;
+	background-size: 3.2rem 1.6rem;*/
+}
+.theme{
+    width: 2.3rem;
+    height: 1rem;
+    position: absolute;
+    top: 0.15rem;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    transform: translate(-50%,0);
+}
+.needCredits {
+    width:0.62rem;
+    height:0.3rem;
+    background:url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/icon-1.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top:0.07rem;
+    left:0.05rem;
+}
+
+.needCredits p {
+    line-height: .3rem;
+    display: inline-block;
+    height: .3rem;
+    float:right;
+    padding: 0 0.1rem 0 0;
+    color: #fff;
+}
+
+.core {
+        width: 2.9rem;
+    height: 2.9rem;
+    margin: 0 auto .075rem;
+}
+
+.core-overflow {
+    overflow: hidden;
+    width: 100%;
+    height: 100%
+}
+
+.circle-box {
+ position: absolute;
+    top: .015rem;
+    left: .015rem;
+    overflow: hidden;
+    width: 2.48rem;
+    height: 2.48rem;
+    border-radius: 50%;
+}
+
+#circle {
+    width: 2.48rem;
+    height: 2.48rem;
+    margin-top: 0.22rem;
+    margin-left: 0.21rem;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
+
+#circle .prize {
+    position: absolute;
+    width: 1.23rem;
+    height: 1.23rem;
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom
+}
+
+#circle .prize:nth-child(1) {
+    -webkit-transform: rotate(60deg) skewY(30deg);
+    transform: rotate(60deg) skewY(30deg)
+}
+
+#circle .prize:nth-child(2) {
+    -webkit-transform: rotate(120deg) skewY(30deg);
+    transform: rotate(120deg) skewY(30deg)
+}
+
+#circle .prize:nth-child(3) {
+    -webkit-transform: rotate(180deg) skewY(30deg);
+    transform: rotate(180deg) skewY(30deg)
+}
+
+#circle .prize:nth-child(4) {
+    -webkit-transform: rotate(240deg) skewY(30deg);
+    transform: rotate(240deg) skewY(30deg)
+}
+
+#circle .prize:nth-child(5) {
+    -webkit-transform: rotate(300deg) skewY(30deg);
+    transform: rotate(300deg) skewY(30deg)
+}
+
+#circle .prize:nth-child(6) {
+    -webkit-transform: rotate(360deg) skewY(30deg);
+    transform: rotate(360deg) skewY(30deg)
+}
+
+#circle .prize .prize-dialog {
+       position: absolute;
+    top: .4rem;
+    left: .42rem;
+    width: .75rem;
+    height: .75rem;
+    -webkit-transform: skewY(-30deg) rotate(-30deg);
+    transform: skewY(-30deg) rotate(-30deg);
+    text-align: center
+}
+
+#start,#start span,.point {
+    position: absolute;
+    left: 50%
+}
+
+#circle .prize .prize-dialog img {
+    width: .4rem;
+    height: .4rem;
+    margin-top: .05rem
+}
+#circle .prize .prize-dialog .etcprize{
+    width:0.4rem;
+    height:0.13rem;
+    margin-top:0;
+}
+#circle .prize .prize-dialog .diasmall{
+    transform: scale(0.8);
+}
+#circle .prize .prize-dialog p {
+    font-size: .1rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#circle .prize:nth-child(odd) .prize-dialog p {
+    color: #312d60;
+}
+
+#circle .prize:nth-child(even) .prize-dialog p {
+    color: #312d60;
+}
+
+#start {
+    top: 50%;
+    width: 0.79rem;
+    height: 0.94rem;
+    -webkit-transform: translate(-50%,-50%) scale(1.1,0);
+    transform: translate(-50%,-50%);
+    background-repeat: no-repeat;
+	z-index:2;
+}
+
+#start span,.turntable-border {
+    -webkit-transform: translate(-50%,-50%)
+}
+
+#start span {
+    font-size: .21rem;
+    top: 50%;
+    display: block;
+    width: .45rem;
+    transform: translate(-50%,-50%);
+    color: #e56c01
+}
+
+.apple {
+    font-size: .1rem;
+    line-height: .2rem;
+    height: .2rem
+}
+
+.apple.fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.point {
+    top: -.065rem;
+    width: .21rem;
+    height: .34rem;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    background-repeat: no-repeat
+}
+
+.radius-group,.turntable-border {
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    position: absolute
+}
+.radius {
+	top: 50%;
+    left: 50%;
+    overflow: hidden;
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    position: absolute;
+	 -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.turntable-border {
+    transform: translate(-50%,-50%);
+   background-color: #fe2e8b
+}
+
+.radius-group {
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-repeat: no-repeat
+}
+
+.rule {
+    position: absolute;
+    bottom: 0.15rem;
+    left: .15rem;
+    width: 1.36rem;
+    height: 0.34rem;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    z-index: 30;
+}
+
+.filter {
+    filter: blur(5px);
+    -webkit-filter: blur(5px)
+}
+
+.prize-detail-dialog .prize-detail-slideup {
+    width: .48rem;
+    height: .48rem;
+    background-image: url("http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/prize-detail-btn.png")!important;
+    background-size: .48rem .48rem
+}
+
+.giveup-modal,.recommand-modal {
+    display: none
+}
+.rule-modal .rule-modal-dialog {
+	padding-top: 0;
+}
+.needCredits p {
+	color: #fff;
+}
+
+
+/* 横屏适配  */
+@media screen and (orientation: landscape) { 
+   #db-content { 
+      background-size: cover;
+      height: 5.35rem; 
+   }
+   .banner {
+	  height: 1.1rem;
+	  background-size: 4rem 1.1rem;
+   }
+} 
+
+/* 换肤替换下面部分 */
+
+body {
+	background-color: #fd7d94 !important;
+}
+
+#db-content {
+	background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/bg-3.jpg) !important;
+}
+
+.record {
+	background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/btn-4.png) !important;
+}
+
+.radius-group.default {
+    background-image: url("http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/radius-1.png")!important;
+}
+
+.radius-group.toggle {
+    background-image: url("http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/radius-2.png")!important;
+}
+
+.radius-group.end {
+    background-image: url("http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/radius-1.png")!important;
+}
+
+.apple {
+	background-color: #139def !important;
+}
+
+.apple {
+	color: #fff !important;
+}
+
+#circle {
+	background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/rotatebg.png) !important;
+}
+.radius { 
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/rotate.png);
+}
+
+.turntable-border {
+	//background-color: #aa007d !important;
+}
+
+#start {
+	background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/btn-1.png) !important;
+}
+
+#start:active {
+	background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/btn-1.png) !important;
+}
+
+#start.disabled {
+	background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/btn-5.png) !important;
+}
+
+.rule {
+	background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304001/img/btn-3.png) !important;
+}
+
+.rule-modal .rule-modal-dialog {
+	//background-color: #4c81e9 !important;
+}
+
+
+.rule-modal .rule-modal-dialog header i {
+	background-color: #f9a52d !important;
+}
+.rule-modal .rule-modal-dialog header {
+	background: #f9a52d;
+}
+

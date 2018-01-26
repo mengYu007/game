@@ -1,0 +1,612 @@
+/*  页面整体布局  */
+
+@charset "utf-8";
+
+*,a:active {
+    outline: 0
+}
+
+body,input {
+    width: 100%
+}
+
+.placeholder,button,html,input,textarea {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif
+}
+
+#start span,b,strong {
+    font-weight: 700
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased
+}
+
+body {
+    line-height: 1;
+    overflow-x: hidden;
+    max-width: 640px;
+    margin: 0 auto;
+    color: #333;
+    background-color: #f0f0f0;
+    -webkit-overflow-scrolling: touch;
+    -webkit-touch-callout: none;
+    font-size: .12rem
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
+    display: block
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+dfn {
+    font-style: normal
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0
+}
+
+button,input,textarea {
+    font-size: .12rem;
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+textarea {
+    resize: none
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse
+}
+
+td,th {
+    padding: 0
+}
+
+blockquote,figure,form,h1,h2,h3,h4,h5,h6,p {
+    margin: 0
+}
+
+dd,dl,li,ol,ul {
+    margin: 0;
+    padding: 0
+}
+
+li,ol,ul {
+    list-style: none
+}
+
+input {
+    height: .34rem;
+    padding: 0 .1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: .04rem
+}
+
+.placeholder {
+    text-align: left;
+    color: #999
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input:-moz-placeholder :-moz-placeholder,
+textarea:-moz-placeholder :-moz-placeholder,
+input:-moz-placeholder ::-webkit-input-placeholder,
+textarea:-moz-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    opacity: 1;
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input::-moz-placeholder :-moz-placeholder,
+textarea::-moz-placeholder :-moz-placeholder,
+input::-moz-placeholder ::-webkit-input-placeholder,
+textarea::-moz-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+input:-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input:-ms-input-placeholder :-moz-placeholder,
+textarea::-ms-input-placeholder :-moz-placeholder,
+input:-ms-input-placeholder ::-webkit-input-placeholder,
+textarea::-ms-input-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+#start span,.apple,.myCredits,.needCredits {
+    text-align: center
+}
+
+input::-webkit-input-placeholder :-moz-placeholder,
+textarea::-webkit-input-placeholder :-moz-placeholder,
+input::-webkit-input-placeholder ::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+.hidden {
+    display: none!important;
+    visibility: hidden!important
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.clearfix {
+    display: table;
+    clear: both;
+    content: ''
+}
+
+#db-content {
+    position: relative;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: 100% 5.04rem;
+    height: 5.04rem
+}
+
+#circle,#start,.point,.radius-group,.record,.rule,.radius {
+    background-size: 100% 100%
+}
+
+.record {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: .6rem;
+    height: .55rem;
+    z-index: 10
+}
+
+.banner {
+	position: relative;
+    height: 1.55rem;
+    margin-bottom: .05rem;
+	background-image:url(../img/rollLottery/banner.png);
+	background-repeat: no-repeat;
+	background-size: 3.2rem 1.4rem;
+}
+
+#start span,.turntable-border {
+    -webkit-transform: translate(-50%,-50%)
+}
+
+#start span {
+    font-size: .21rem;
+    top: 50%;
+    display: block;
+    width: .45rem;
+    transform: translate(-50%,-50%);
+    color: #e56c01
+}
+#start {
+	position: absolute;
+    bottom: 0.2rem;
+	left: 50%;
+    width: .75rem;
+    height: .55rem;
+    margin-left: -0.375rem;
+    background-repeat: no-repeat;
+	z-index:2;
+	background-color: transparent;
+	-webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+}
+#start.pulseBtn {
+	-webkit-animation-name: pulseBtn;
+    animation-name: pulseBtn;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes pulseBtn {
+    from,to {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+
+    50% {
+        -webkit-transform: scaleY(1.1);
+        transform: scaleY(1.1);
+    }
+}
+
+@keyframes pulseBtn {
+    from,to {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+
+    50% {
+        -webkit-transform: scaleY(1.1);
+        transform: scaleY(1.1);
+    }
+}
+
+.rule {
+    position: absolute;
+    top: .09rem;
+    left: .15rem;
+    width: .46rem;
+    height: .17rem;
+    cursor: pointer;
+    background-repeat: no-repeat
+}
+
+.filter {
+    filter: blur(5px);
+    -webkit-filter: blur(5px)
+}
+
+.prize-detail-dialog .prize-detail-slideup {
+    width: .48rem;
+    height: .48rem;
+    background-image: url("../img/prize-detail-btn.png")!important;
+    background-size: .48rem .48rem
+}
+
+.giveup-modal,.recommand-modal {
+    display: none
+}
+
+.rule-modal .rule-modal-dialog header i {
+    background-color: #fff
+}
+
+.rule-modal .close,.rule-modal .rule-modal-dialog header span,
+.rule-modal .rule-modal-dialog section .description,
+.rule-modal .rule-modal-dialog section .probability .text {
+    color: #fff
+}
+#db-content, .slot-machine, .slot-machine-container ,body {
+    position: relative;
+}
+.slot-machine {
+	width: 2.79rem;
+	height: 3.785rem;
+	margin: 0 auto;
+    background-size: 100% 100%;
+}
+
+.slot-machine .light {
+	position: relative;
+	display: inline-block;
+	width: .16322148rem;
+	height: .16322148rem
+}
+
+.slot-machine .light:after {
+	position: absolute;
+	top: -.10308725rem;
+	left: -.10308725rem;
+	width: .34362416rem;
+	height: .33932886rem;
+	content: '';
+	-webkit-animation: flash .5s linear infinite alternate;
+	animation: flash .5s linear infinite alternate
+}
+
+.slot-machine .light-pane {
+	position: absolute
+}
+
+.slot-machine .landscape-pane .light,.slot-machine .landscape-pane .light:first-child {
+	margin-left: .34362416rem
+}
+
+.slot-machine .landscape-pane .light:nth-child(odd):after {
+	-webkit-animation-delay: .5s;
+	animation-delay: .5s
+}
+
+.slot-machine .vertical-pane .light {
+	display: block;
+	margin-top: .25771812rem
+}
+
+.slot-machine .reel img,.slot-machine .vertical-pane .light:first-child {
+	margin-top: 0.55rem;
+}
+
+.slot-machine .vertical-pane .light:nth-child(even):after {
+	-webkit-animation-delay: .5s;
+	animation-delay: .5s
+}
+
+.slot-machine .top-light-pane {
+	top: .01718121rem
+}
+
+.slot-machine .bottom-light-pane {
+	bottom: .08590604rem
+}
+
+.slot-machine .left-light-pane {
+	left: -.0085906rem
+}
+
+.slot-machine .right-light-pane {
+	right: -.0085906rem
+}
+
+.slot-machine .slot-machine-outer {
+	position: absolute;
+	top: .72rem;
+	left: .3rem;
+	overflow: hidden;
+	width: 2.185rem;
+	height: 2.21rem;
+}
+
+.slot-machine .slot-machine-outer:before {
+	position: absolute;
+	z-index: 22;
+	width: 2.185rem;
+    height: 2.21rem;
+	content: ' ';
+	background-repeat: no-repeat;
+	background-size: 100% 100%
+}
+
+.slot-machine .slot-machine-inner {
+	position: absolute;
+	top: -.44rem
+}
+
+.slot-machine .reel .tile {
+	width: 2.185rem;
+	height: .64rem;
+	text-align: center
+}
+
+.slot-machine .tile {
+	position: relative
+}
+
+.slot-machine .tile:before {
+	position: absolute;
+	top: .03rem;
+	left: .08rem;
+	width: .75597315rem;
+	height: .76456376rem;
+	content: ''
+}
+
+.slot-machine .reel img {
+	position: absolute;
+	width: 1.98rem;
+	margin-left: -0.985rem;
+	border-radius: .08590604rem;
+}
+
+.slot-machine .reel {
+	position: absolute;
+	width: 2.185rem;
+}
+
+.slot-machine .reel-2 {
+	left: .9rem
+}
+
+.slot-machine .reel-3 {
+	left: 1.76rem
+}
+.light-group {
+	position: absolute;
+	top: 0.12rem;
+	left: 50%;
+	margin-left: -1.38rem;
+	width: 2.76rem;
+    height: 3.16rem;
+    background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.slot-machine .reel .active.scaleBig img {
+   -webkit-animation: scaleBig 0.2s ease;
+    animation: scaleBig 0.2s ease;
+	-webkit-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+	z-index: 9999;	
+}
+@-webkit-keyframes scaleBig {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1)
+    }
+}
+
+@keyframes scaleBig {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1)
+    }
+}
+.rule-modal .rule-modal-dialog header {
+	margin-bottom: .125rem;
+	margin-left: -0.1rem;
+	margin-right: -0.06rem;
+	padding: 0.1rem 0;
+	border-top-left-radius: 0.1rem;
+	border-top-right-radius: 0.1rem;
+	background: #5b94ff;
+}
+.rule-modal .rule-modal-dialog {
+	padding-top: 0;
+}
+.needCredits {
+	position: absolute;
+	z-index: 1;
+	top: 0.37rem;
+	width: 100%;
+}
+.needCredits p {
+	display: inline-block;
+	padding: 0.05rem 0 0.05rem 0.26rem;
+	background-image: url(../img/rollLottery/heart.png);
+	background-repeat:no-repeat;
+	background-position:left center;
+	background-size: 0.22rem 0.22rem;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	text-shadow: none;
+	color: #a60384;
+	border-color: #a60384;
+	text-align: center;
+	font-weight: bold;
+    font-size: 0.155rem;
+}
+
+/* 横屏适配  */
+@media screen and (orientation: landscape) {   
+   body { max-width: 1024px; }
+   #db-content { 
+      background-size: cover;
+      height: 5.35rem; 
+   }
+   .banner {
+	  height: 1.8rem;
+	  background-size: 4rem 1.8rem;
+   }
+} 
+
+/* 换肤功能，替换下面 */
+
+body {
+	background-color: #5b94ff !important;
+}
+#db-content {
+	background-image: url(../img/rollLottery/bg.png) !important;
+}
+.banner {
+	background-image: url(../img/rollLottery/banner.png)!important;
+}
+#start {
+	background-image: url(../img/rollLottery/startbtn.png) !important;	
+}
+
+#start:active {
+	background-image: url(../img/rollLottery/startbtn.png) !important;
+}
+
+#start.disabled {
+	background-image: url(../img/rollLottery/startbtn_disabled.png) !important;
+}
+.slot-machine {
+	background-image: url(../img/rollLottery/slot-machine-bg.png);
+}
+.light-group.default {
+    background-image: url("../img/rollLottery/radius-1.png");
+}
+.light-group.default.toggle {
+    background-image: url("../img/rollLottery/radius-2.png");
+}
+.needCredits p {
+	background-image: url(../img/rollLottery/heart.png);
+}
+
+.record {
+	background-image: url(../img/rollLottery/record.png) !important;
+}
+
+.rule {
+	background-image: url(../img/rule.png) !important;
+}
+
+.rule-modal .rule-modal-dialog {
+	background-color: #4c81e9 !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability {
+	background-color: #4c81e9 !important;
+}
+
+.rule-modal .rule-modal-dialog header span,
+.rule-modal .rule-modal-dialog section .description {
+	color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog header i {
+	background-color: #5b94ff !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav {
+	background-color: #a60384 !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav span {
+	color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability.active .text {
+	color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav i {
+	border-top-color: #fff !important;
+	border-left-color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog header {
+	background: #5b94ff;
+}

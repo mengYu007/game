@@ -1,0 +1,99 @@
+@charset "utf-8";
+.flypack{
+    /* width: 0.96rem;
+    height: 0.5rem; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fly 4s linear 1 forwards;
+    z-index: 5;
+    /* transform-origin: bottom center; */
+}
+.wing{
+    width: 0.575rem;
+    height: 0.44rem;
+    position: absolute;
+    top: 0.2rem;
+    background-size: 100% 100%;
+}
+.flyleft{
+    left: -0.35rem;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/img/flypack/wing.png);
+    animation: wingleft .5s linear infinite alternate;
+    transform-origin: right center;
+}
+.flyright{
+    right: -0.35rem;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/img/flypack/wing2.png);
+    animation: wingright .5s linear infinite alternate;
+    transform-origin: left center;
+}
+.pack{
+    position: absolute;
+    width: 0.77rem;
+    height: 0.95rem;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/img/flypack/red.png);
+    background-size: 100% 100%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+@-webkit-keyframes wingleft{
+    from{
+        transform: rotateZ(15deg);
+    }
+    to{
+        transform: rotateZ(-15deg);
+    }
+}
+@keyframes wingleft {
+    from{
+        transform: rotateZ(15deg);
+    }
+    to{
+        transform: rotateZ(-15deg);
+    }
+}
+@-webkit-keyframes wingright{
+    from{
+        transform: rotateZ(-15deg);
+    }
+    to{
+        transform: rotateZ(15deg);
+    }
+}
+@keyframes wingright {
+    from{
+        transform: rotateZ(-15deg);
+    }
+    to{
+        transform: rotateZ(15deg);
+    }
+}
+@-webkit-keyframes fly{
+    10%{
+        transform: translate(-0.5rem,0);
+    }
+    30%{
+        transform: translate(2.8rem,0.5rem);
+    }
+    60%{
+        transform: translate(0.3rem,1.8rem);
+    }
+    100%{
+        transform: translate(3.15rem,3.1rem) rotateZ(-15deg);
+    }
+}
+@keyframes fly {
+    10%{
+        transform: translate(-0.5rem,0);
+    }
+    30%{
+        transform: translate(2.8rem,0.5rem);
+    }
+    60%{
+        transform: translate(0.3rem,1.8rem);
+    }
+    100%{
+        transform: translate(3rem,3.1rem) rotateZ(-15deg);
+    }
+}

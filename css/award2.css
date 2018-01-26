@@ -1,0 +1,468 @@
+.coupon-modal-showPrize {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.65)
+}
+
+.coupon-modal-showPrize .close {
+    position: absolute;
+    bottom: -0.3rem;
+    left: 50%;
+    margin-left: -0.15rem;
+    right: .21333333rem;
+    z-index: 10002;
+    width: .3rem;
+    height: .3rem;
+    background-image: url(../img/close1.png);
+    background-size: 100% 100%;
+    opacity: 0;
+    -webkit-animation: showClose 1s .5s linear forwards;
+    animation: showClose 1s .5s linear forwards
+}
+
+.coupon-modal-showPrize-dialog {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 4.096rem;
+    margin-left: -50%;
+    -webkit-animation: showModal .5s ease-in-out;
+    animation: showModal .5s ease-in-out
+}
+
+.coupon-modal-showPrize-dialog .modal-header {
+    position: relative
+}
+
+.coupon-modal-showPrize-dialog .modal-body {
+    position: absolute;
+    left: 50%;
+    z-index: 888;
+    border-radius: .08533333rem;
+    width: 100%;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    height: 100%
+}
+
+.coupon-modal-showPrize-dialog .coupon-wrapper {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    z-index: 22;
+    width: 2rem;
+    height: 1.3rem;
+    padding: 0;
+    background-image: none;
+    background-size: 100% 100%;
+    border-radius: .04266667rem;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    -webkit-animation-name: showCoupon;
+    animation-name: showCoupon;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.coupon-modal-showPrize-dialog .coupon-wrapper:after{
+	position: absolute;
+	content:"";
+	top:0;
+	left:0;
+	width: 2rem;
+	height: 0.3rem;
+	background: url(../img/couponPrize/1/award-top.png) no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+	color: #ff831f;
+}
+.coupon-modal-showPrize-dialog .coupon-wrapper:before{
+	position: absolute;
+    content:"";
+	width: 2rem;
+	height: 0.2rem;
+	background: #d84840;
+	left: 0;
+	bottom: -0.2rem;
+}
+.coupon-modal-showPrize-dialog .coupon-image {
+    position: relative;
+	top:0.3rem;
+    width: 2rem;
+    height: 1rem;
+    margin: 0 auto;
+	padding: 0.05rem;
+    overflow: hidden;
+    background: #d84840;
+}
+
+.coupon-modal-showPrize-dialog .coupon-image img {
+    width: 100%;
+    height: 100%
+}
+
+.coupon-modal-showPrize-dialog .body-header {
+    height: 2.61rem;
+    width: 2.305rem;
+    background-image: url(../img/couponPrize/1/bg-back1.png);
+    background-size: 100% 100%;
+    margin: 1.2rem auto 0
+}
+
+.coupon-modal-showPrize-dialog .body-footer {
+    position: relative;
+    z-index: 33;
+    width: 2.305rem;
+    height: 1.8304rem;
+    box-sizing: border-box;
+    padding-top: .3584rem;
+    top: -1.15rem;
+    margin: 0 auto;
+    background-image: url(../img/couponPrize/1/bg-front.png);
+    background-size: 100% 100%;
+    text-align: center;
+    background-repeat: no-repeat
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-win {
+    background-size: 100% 100%;
+    background-image: url(../img/win-tip.png);
+    height: .18346667rem;
+    width: 1.1136rem;
+    display: none;
+    margin: 0.5rem auto 0;
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-name span {
+    margin: .11093333rem auto 0;
+    display: inline-block;
+    border-radius: .04266667rem;
+    font-size: .1024rem;
+    font-weight: 400;
+    line-height: 1;
+    background-color: #e4331c;
+    text-align: center;
+    padding: .04266667rem .13653333rem;
+    letter-spacing: .01706667rem;
+    color: #ffde45
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-code {
+    margin-top: .1024rem;
+    padding: 0 .1024rem
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-code p.code {
+    display: inline-block;
+    width: 49%;
+    font-size: .09386667rem;
+    color: #ffe4e1;
+    text-align: center
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-code p.code span {
+    margin-right: .01706667rem
+}
+
+.coupon-modal-showPrize-dialog .body-footer a {
+    display: block;
+    width: 100%;
+    margin-top: -.04266667rem;
+    line-height: .21333333rem;
+    color: #fff;
+    text-align: center
+}
+
+.coupon-modal-showPrize-dialog .body-footer a span {
+    margin-left: .01706667rem
+}
+
+.coupon-modal-showPrize-dialog .withoutCode .body-footer {
+    background-image: url(../img/couponPrize/1/bg-front-low1.png);
+    height: 1.15rem;
+}
+
+.coupon-modal-showPrize-dialog .coupon-use {
+    display: block;
+    width: 1.935rem;
+    height: .365rem;
+    margin: .34rem auto 0;
+    font-size: .1536rem;
+    font-weight: 700;
+    color: #e42410;
+    background-color: transparent;
+    background-image: url(../img/couponPrize/1/btn1.png);
+    background-size: 100% 100%
+}
+
+.coupon-modal-showPrize-dialog .coupon-use[disabled] {
+    font-size: .128rem;
+    font-weight: 400;
+    color: #fff;
+    background: -webkit-linear-gradient(top,#ccc,#ccc);
+    background: linear-gradient(to bottom,#ccc,#ccc);
+    background-color: #ccc
+}
+
+.coupon-modal-showPrize-dialog .coupon-use[disabled]>* {
+    vertical-align: middle
+}
+
+.coupon-modal-showPrize-dialog .coupon-use span {
+    position: relative;
+  /*  top: -.04rem;*/
+	display: block;
+    font-size: 1.1em;
+}
+
+.coupon-modal-showPrize-dialog .decoration {
+    position: absolute;
+    top: 0.89rem;
+    z-index: 999;
+    display: block;
+    width: 3rem;
+    height: 2.35rem;
+    pointer-events: none;
+    background-image: url(../img/couponPrize/1/decoration1.png);
+    background-size: 100% 100%;
+    -webkit-animation: showRedpacks .5s .5s;
+    animation: showRedpacks .5s .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    left: 50%;
+	margin-left: -1.5rem;
+}
+
+.l-shine,.modal-light {
+    position: absolute;
+    left: 50%
+}
+
+.modal-light {
+    top: 1.536rem;
+    z-index: 100;
+    display: inline-block;
+    width: .68266667rem;
+    height: .34133333rem;
+    background-color: #ff8a2c;
+    border-radius: 50%;
+    box-shadow: 0 0 1.024rem .59733333rem #ff8a2c;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    -webkit-animation: showLightBg 1s linear 1;
+    animation: showLightBg 1s linear 1
+}
+
+.l-shine {
+    top: -.85333333rem;
+    z-index: 101;
+    width: 3.28533333rem;
+    height: 3.28533333rem;
+    background-image: url(../img/couponPrize/1/light.png);
+    background-size: 100% 100%;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    -webkit-animation: showLight 1s linear 1,lightRound 18s linear 1s infinite;
+    animation: showLight 1s linear 1,lightRound 18s linear 1s infinite
+}
+
+@-webkit-keyframes goRound {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes goRound {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes showModal {
+    from {
+        -webkit-transform: scale(.1);
+        transform: scale(.1)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes showModal {
+    from {
+        -webkit-transform: scale(.1);
+        transform: scale(.1)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes showCoupon {
+    from {
+        bottom: .5rem
+    }
+
+    to {
+        bottom: 1.25rem
+    }
+}
+
+@keyframes showCoupon {
+    from {
+        bottom: .5rem
+    }
+
+    to {
+        bottom: 1.25rem
+    }
+}
+
+@-webkit-keyframes lightRound {
+    from {
+        -webkit-transform: translate(-50%,0) rotate(0);
+        transform: translate(-50%,0) rotate(0)
+    }
+
+    to {
+        -webkit-transform: translate(-50%,0) rotate(360deg);
+        transform: translate(-50%,0) rotate(360deg)
+    }
+}
+
+@keyframes lightRound {
+    from {
+        -webkit-transform: translate(-50%,0) rotate(0);
+        transform: translate(-50%,0) rotate(0)
+    }
+
+    to {
+        -webkit-transform: translate(-50%,0) rotate(360deg);
+        transform: translate(-50%,0) rotate(360deg)
+    }
+}
+
+@-webkit-keyframes showLight {
+    from {
+        top: .256rem;
+        width: 0;
+        height: 0
+    }
+
+    to {
+        top: -.85333333rem;
+        width: 3.28533333rem;
+        height: 3.28533333rem
+    }
+}
+
+@keyframes showLight {
+    from {
+        top: .256rem;
+        width: 0;
+        height: 0
+    }
+
+    to {
+        top: -.85333333rem;
+        width: 3.28533333rem;
+        height: 3.28533333rem
+    }
+}
+
+@-webkit-keyframes showLightBg {
+    from {
+        top: 2.56rem;
+        width: 0;
+        height: 0
+    }
+
+    to {
+        top: 1.536rem;
+        width: .68266667rem;
+        height: .34133333rem
+    }
+}
+
+@keyframes showLightBg {
+    from {
+        top: 2.56rem;
+        width: 0;
+        height: 0
+    }
+
+    to {
+        top: 1.536rem;
+        width: .68266667rem;
+        height: .34133333rem
+    }
+}
+
+@-webkit-keyframes showClose {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes showClose {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes showRedpacks {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(.9);
+        transform: scale(.9)
+    }
+}
+
+@keyframes showRedpacks {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(.9);
+        transform: scale(.9)
+    }
+}

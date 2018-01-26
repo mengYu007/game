@@ -1,0 +1,532 @@
+﻿.coupon-modal-showPrize {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.65)
+}
+
+.coupon-modal-showPrize .close {
+    position: absolute;
+    top: .59733333rem;
+    right: .21333333rem;
+    z-index: 10002;
+    width: .3rem;
+    height: .3rem;
+    background-image: url(../../img/recommend/close1.png);
+    background-size: 100% 100%;
+    opacity: 0;
+    -webkit-animation: showClose 1s .5s linear forwards;
+    animation: showClose 1s .5s linear forwards
+}
+
+.coupon-modal-showPrize-dialog {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    height: 4.096rem;
+    margin-left: -50%;
+    -webkit-animation: showModal .5s ease-in-out;
+    animation: showModal .5s ease-in-out
+}
+.showModal1 .coupon-modal-showPrize-dialog {
+    -webkit-animation: 0.5s  showModal1 0.4s linear 1;
+    animation: 0.5s  showModal1 0.4s linear 1;
+	-webkit-transform: rotateY(-90deg);
+	transform: rotateY(-90deg);
+	-webkit-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;	
+}
+.showModal1.coupon-modal-showPrize { background-color: rgba(0,0,0,0); }
+
+
+.coupon-modal-showPrize-dialog .modal-header {
+    position: relative
+}
+
+.coupon-modal-showPrize-dialog .modal-body {
+    position: absolute;
+    left: 50%;
+    z-index: 888;
+    border-radius: .08533333rem;
+    width: 100%;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    height: 100%
+}
+
+.coupon-modal-showPrize-dialog .coupon-wrapper {
+        position: absolute;
+    /* bottom: 1.2rem; */
+    left: 50%;
+        top: 1.3rem;
+    z-index: 22;
+   width: 2.3rem;
+    height: 1.5rem;
+    padding: 0;
+    background:#ae1e2d;
+    background-size: 100% 100%;
+    border-radius: .04266667rem;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    -webkit-animation-name: showCoupon;
+    animation-name: showCoupon;
+    -webkit-animation-duration: .5s;
+    animation-duration: .5s;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.coupon-modal-showPrize-dialog .coupon-image {
+    position: relative;
+    width: 2.3rem;
+    height: 1.3rem;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 0.04rem;
+    border-radius: .04266667rem
+}
+
+.coupon-modal-showPrize-dialog .coupon-image img {
+    width: 100%;
+    height: 100%
+}
+
+.coupon-modal-showPrize-dialog .body-header {
+    height: 2.86rem;
+    width: 2.48rem;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304002/img/bg-back.png);
+    background-size: 100% 100%;
+    margin: 1.2rem auto 0
+}
+
+.coupon-modal-showPrize-dialog .body-footer {
+    position: relative;
+    z-index: 33;
+    width: 2.78rem;
+    height: 1.8304rem;
+    box-sizing: border-box;
+    padding-top: .3584rem;
+    top: -2rem;
+    margin: 0 auto;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304002/img/bg-front.png);
+    background-size: 100% 100%;
+    text-align: center;
+    background-repeat: no-repeat
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-win {
+    background-size: 100% 100%;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304002/img/win-tip.png);
+    height: .18346667rem;
+    width: 1.1136rem;
+    display: block;
+    margin: 0.7rem auto 0;
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-name span {
+    margin: .11093333rem auto 0;
+    display: inline-block;
+    border-radius: .04266667rem;
+    font-size: .1024rem;
+    font-weight: 400;
+    line-height: 1;
+    background-color: #e4331c;
+    text-align: center;
+    padding: .04266667rem .13653333rem;
+    letter-spacing: .01706667rem;
+    color: #ffde45
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-code {
+    margin-top: .1024rem;
+    padding: 0 .1024rem
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-code p.code {
+    display: inline-block;
+    width: 49%;
+    font-size: .09386667rem;
+    color: #ffe4e1;
+    text-align: center
+}
+
+.coupon-modal-showPrize-dialog .body-footer .coupon-code p.code span {
+    margin-right: .01706667rem
+}
+
+.coupon-modal-showPrize-dialog .body-footer a {
+    display: block;
+    width: 100%;
+    margin-top: -.04266667rem;
+    line-height: .21333333rem;
+    color: #fff;
+    text-align: center
+}
+
+.coupon-modal-showPrize-dialog .body-footer a span {
+    margin-left: .01706667rem
+}
+
+.coupon-modal-showPrize-dialog .withoutCode .body-footer {
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304002/img/bg-front-low.png);
+    height: 2.065rem;
+}
+
+.coupon-modal-showPrize-dialog .coupon-use {
+    display: block;
+    width:  1.81rem;
+    height: 0.36rem;
+    margin: .1792rem auto 0;
+    font-size: .1536rem;
+    font-weight: 700;
+    color: #e42410;
+    text-align: center;
+    background-color: transparent;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304002/img/btn-6.png);
+    background-size: 100% 100%
+}
+
+.coupon-modal-showPrize-dialog .coupon-use[disabled] {
+    font-size: .128rem;
+    font-weight: 400;
+    color: #fff;
+    background: -webkit-linear-gradient(top,#ccc,#ccc);
+    background: linear-gradient(to bottom,#ccc,#ccc);
+    background-color: #ccc
+}
+
+.coupon-modal-showPrize-dialog .coupon-use[disabled]>* {
+    vertical-align: middle
+}
+
+.coupon-modal-showPrize-dialog .coupon-use span {
+    position: relative;
+    /*top: -.04rem;
+	display: none;*/
+    display: inline-block;
+    /*width: .4rem; */
+    font-size: .15rem;
+}
+
+.coupon-modal-showPrize-dialog .decoration {
+    position: absolute;
+    top: 1.05rem;
+    z-index: 999;
+    display: block;
+    width: 3.2rem;
+    height: 1.85rem;
+    pointer-events: none;
+   // background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304002/img/redpacks1.png);
+    background-size: 100% 100%;
+    -webkit-animation: showRedpacks .5s .5s;
+    animation: showRedpacks .5s .5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    left: 50%;
+    margin-left: -1.6rem;
+}
+
+.l-shine,.modal-light {
+    position: absolute;
+    left: 50%
+}
+
+.modal-light {
+    top: 1.536rem;
+    z-index: 100;
+    display: inline-block;
+    width: .68266667rem;
+    height: .34133333rem;
+    background-color: #ff8a2c;
+    border-radius: 50%;
+    box-shadow: 0 0 1.024rem .59733333rem #e88f47;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    -webkit-animation: showLightBg 1s linear 1;
+    animation: showLightBg 1s linear 1
+}
+
+.l-shine {
+    top: -.85333333rem;
+    z-index: 101;
+    width: 3.28533333rem;
+    height: 3.28533333rem;
+    background-image: url(http://mdcdn.kuaiyou.com/interactionMedia/games/304002/img/light1.png);
+    background-size: 100% 100%;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    -webkit-animation: showLight 1s linear 1,lightRound 18s linear 1s infinite;
+    animation: showLight 1s linear 1,lightRound 18s linear 1s infinite
+}
+
+/* 横屏适配  */
+@media screen and (orientation: landscape) {   
+	.coupon-modal-showPrize-dialog .body-header {
+	    height: 2.75rem;
+        width: 2.4rem;
+	    margin: 0.2rem auto 0;
+	}
+	.coupon-modal-showPrize-dialog .coupon-wrapper {
+	    bottom: 2.5rem;
+	    -webkit-animation-name: showCoupon1; 
+        animation-name: showCoupon1;
+	}
+	.coupon-modal-showPrize-dialog .decoration {
+	    top: 0.05rem;
+	}
+	.coupon-modal-showPrize-dialog .withoutCode .body-footer {
+	    top: -1.9rem;
+	    height: 2rem;
+	    width: 2.4rem;
+	}
+	.coupon-modal-showPrize-dialog .body-footer .coupon-win {
+	    margin: 0.4rem auto 0;
+	}
+	.coupon-modal-showPrize .close {
+	    top: 0.1rem;
+        right: 1rem;
+	}
+}
+
+
+@-webkit-keyframes goRound {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes goRound {
+    from {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes showModal {
+    from {
+        -webkit-transform: scale(.1);
+        transform: scale(.1)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes showModal {
+    from {
+        -webkit-transform: scale(.1);
+        transform: scale(.1)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+@-webkit-keyframes showModal1 {
+    from {
+		 -webkit-transform: rotateY(-90deg);
+		transform: rotateY(-90deg);
+    }
+
+    to {
+       -webkit-transform: rotateY(0deg);
+		transform: rotateY(0deg); 
+    }
+}
+
+@keyframes showModal1 {
+    from {
+		 -webkit-transform: rotateY(-90deg);
+		transform: rotateY(-90deg);
+    }
+
+    to {
+       -webkit-transform: rotateY(0deg);
+		transform: rotateY(0deg); 
+    }
+}
+
+@-webkit-keyframes showCoupon {
+    from {
+        bottom: 0.35rem;
+    }
+
+    to {
+        bottom: 1.5rem
+    }
+}
+
+@keyframes showCoupon {
+    from {
+        bottom: 0.35rem;
+    }
+
+    to {
+        bottom: 1.5rem
+    }
+}
+
+@-webkit-keyframes showCoupon1 {
+    from {
+        bottom: 1.5rem;
+    }
+
+    to {
+        bottom: 2.5rem
+    }
+}
+
+@keyframes showCoupon1 {
+    from {
+        bottom: 1.5rem
+    }
+
+    to {
+        bottom: 2.5rem
+    }
+}
+
+@-webkit-keyframes lightRound {
+    from {
+        -webkit-transform: translate(-50%,0) rotate(0);
+        transform: translate(-50%,0) rotate(0)
+    }
+
+    to {
+        -webkit-transform: translate(-50%,0) rotate(360deg);
+        transform: translate(-50%,0) rotate(360deg)
+    }
+}
+
+@keyframes lightRound {
+    from {
+        -webkit-transform: translate(-50%,0) rotate(0);
+        transform: translate(-50%,0) rotate(0)
+    }
+
+    to {
+        -webkit-transform: translate(-50%,0) rotate(360deg);
+        transform: translate(-50%,0) rotate(360deg)
+    }
+}
+
+@-webkit-keyframes showLight {
+    from {
+        top: .256rem;
+        width: 0;
+        height: 0
+    }
+
+    to {
+        top: -.85333333rem;
+        width: 3.28533333rem;
+        height: 3.28533333rem
+    }
+}
+
+@keyframes showLight {
+    from {
+        top: .256rem;
+        width: 0;
+        height: 0
+    }
+
+    to {
+        top: -.85333333rem;
+        width: 3.28533333rem;
+        height: 3.28533333rem
+    }
+}
+
+@-webkit-keyframes showLightBg {
+    from {
+        top: 2.56rem;
+        width: 0;
+        height: 0
+    }
+
+    to {
+        top: 1.536rem;
+        width: .68266667rem;
+        height: .34133333rem
+    }
+}
+
+@keyframes showLightBg {
+    from {
+        top: 2.56rem;
+        width: 0;
+        height: 0
+    }
+
+    to {
+        top: 1.536rem;
+        width: .68266667rem;
+        height: .34133333rem
+    }
+}
+
+@-webkit-keyframes showClose {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes showClose {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes showRedpacks {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+@keyframes showRedpacks {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}

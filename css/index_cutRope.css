@@ -1,0 +1,554 @@
+@charset "utf-8";
+
+*,a:active {
+	outline: 0
+}
+
+body,input {
+	width: 100%
+}
+
+.placeholder,button,html,input,textarea {
+	font-family: 'Microsoft Yahei','Helvetica Neue',Helvetica,Hiragino Sans GB,STHeiTi,Arial,sans-serif
+}
+
+* {
+	box-sizing: border-box
+}
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased
+}
+
+body {
+	line-height: 1;
+	overflow-x: hidden;
+	max-width: 640px;
+	margin: 0 auto;
+	color: #333;
+	background-color: #f0f0f0;
+	-webkit-overflow-scrolling: touch;
+	-webkit-touch-callout: none
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
+	display: block
+}
+
+a {
+	text-decoration: none;
+	color: inherit
+}
+
+b,strong {
+	font-weight: 700
+}
+
+dfn {
+	font-style: normal
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0
+}
+
+button,input,textarea {
+	font-size: .12rem;
+	margin: 0;
+	padding: 0;
+	border: 0
+}
+
+textarea {
+	resize: none
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse
+}
+
+td,th {
+	padding: 0
+}
+
+blockquote,figure,form,h1,h2,h3,h4,h5,h6,p {
+	margin: 0
+}
+
+dd,dl,li,ol,ul {
+	margin: 0;
+	padding: 0
+}
+
+li,ol,ul {
+	list-style: none
+}
+
+input {
+	height: .34rem;
+	padding: 0 .1rem;
+	text-align: left;
+	border: 1px solid #ddd;
+	border-radius: .04rem
+}
+
+.placeholder {
+	text-align: left;
+	color: #999
+}
+
+input:-moz-placeholder,textarea:-moz-placeholder {
+	font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+	text-align: left;
+	color: #999
+}
+
+input:-moz-placeholder :-moz-placeholder,textarea:-moz-placeholder :-moz-placeholder {
+	color: #ddd
+}
+
+input:-moz-placeholder ::-webkit-input-placeholder,textarea:-moz-placeholder ::-webkit-input-placeholder {
+	color: #ddd
+}
+
+input::-moz-placeholder,textarea::-moz-placeholder {
+	opacity: 1;
+	font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+	text-align: left;
+	color: #999
+}
+
+input::-moz-placeholder :-moz-placeholder,textarea::-moz-placeholder :-moz-placeholder {
+	color: #ddd
+}
+
+input::-moz-placeholder ::-webkit-input-placeholder,textarea::-moz-placeholder ::-webkit-input-placeholder {
+	color: #ddd
+}
+
+input:-ms-input-placeholder,textarea::-ms-input-placeholder {
+	font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+	text-align: left;
+	color: #999
+}
+
+input:-ms-input-placeholder :-moz-placeholder,textarea::-ms-input-placeholder :-moz-placeholder {
+	color: #ddd
+}
+
+input:-ms-input-placeholder ::-webkit-input-placeholder,textarea::-ms-input-placeholder ::-webkit-input-placeholder {
+	color: #ddd
+}
+
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+	font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+	text-align: left;
+	color: #999
+}
+
+input::-webkit-input-placeholder :-moz-placeholder,textarea::-webkit-input-placeholder :-moz-placeholder {
+	color: #ddd
+}
+
+input::-webkit-input-placeholder ::-webkit-input-placeholder,textarea::-webkit-input-placeholder ::-webkit-input-placeholder {
+	color: #ddd
+}
+
+#needCredits,#prize-list .prize-name,.apple {
+	text-align: center;
+	color: #fff
+}
+
+.hidden {
+	display: none!important;
+	visibility: hidden!important
+}
+
+.fl {
+	float: left
+}
+
+.fr {
+	float: right
+}
+
+body {
+	font-size: .1rem
+}
+
+#db-content {
+	display: block;
+	width: 100%;
+	height: 5.1456rem;
+	background-size: 100% 100%
+}
+
+#db-content .banner {
+	/* position: relative; */
+	height: 2rem
+}
+
+#db-content .banner .record,
+#db-content .banner .rule-btn{
+	position: absolute;
+	background-size: 100% 100%;
+	display: inline-block
+}
+
+#db-content .banner img {
+}
+
+#db-content .banner .record {
+	top: 0;
+	right: 0;
+	width: .555rem;
+	height: .555rem
+}
+
+
+#db-content .banner .rule-btn {
+	top: .03rem;
+	left: .03rem;
+	width: .46rem;
+	height: .17rem
+}
+
+#db-content .prize-list {
+	box-sizing: border-box;
+	height: .9rem;
+	margin-top: 0.3rem;
+    padding: 0.38rem 0;
+	overflow: hidden;
+}
+.prize-tag {
+	position: absolute;
+    top: 0.05rem;
+    width: 3.2rem;
+    margin: 0 auto 0.2rem;
+    height: 0.13rem;
+	background-image: url(../img/regard.png) !important;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.banner,.box i,.box2 i,.record,.rope i {
+    display: block;
+    background-repeat: no-repeat
+}
+
+.main {
+    padding-bottom: 0;
+    background-repeat: no-repeat
+}
+
+.record {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: .555rem;
+    height: .555rem;
+	background-size: 100% 100%;
+}
+.rule {
+    position: absolute;
+    top: .09rem;
+    left: .15rem;
+    width: .46rem;
+    height: .17rem;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.banner {
+    width: 3.2rem;
+    height: 1.17rem;
+    margin: 0 auto
+}
+
+.box i,.box2 i,.rope i {
+    width: 1.56rem
+}
+
+.box-container {
+    position: relative;
+    height: 2rem
+}
+
+.boxImg {
+    position: absolute;
+    top: -.33rem;
+    left: 53%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+.boxImg.rope {
+	top:-0.33rem;
+	left: 56%;
+}
+
+.box i,.box2 i,.rope i {
+    background-size: 1.56rem 2rem;
+    -webkit-transform-origin: center top;
+    transform-origin: center top
+}
+
+.box2 i{
+	 background-size: 1.56rem 2.13rem;
+}
+
+.leadStart .lead,.leadStart .pointer {
+    background-size: 100%;
+    background-repeat: no-repeat
+}
+
+.box i.hide,.box2 i.hide,.rope i.hide {
+    display: none
+}
+
+.box i {
+    height: 2rem
+}
+
+.rope i {
+    height: .6rem;
+    width: 0.24rem;
+    background-size: 100% 100%;
+}
+
+.box2 {
+    top: .4rem
+}
+
+.box2 i {
+    height: 2.13rem;
+    background-position: bottom
+}
+
+.leadStart,.needCredits {
+    width: 100%;
+    position: absolute
+}
+
+.needCredits {
+    bottom: -0.2rem;
+    color: #e58c0f;
+	text-align: center;
+}
+
+.leadStart {
+    top: 1.5rem
+}
+
+.leadStart .lead {
+    position: absolute;
+    display: none
+}
+
+.leadStart .lead.active {
+    display: block
+}
+
+.leadStart .one {
+    width: .15rem;
+    height: .3rem;
+    left: .25rem;
+    background-image: url(../img/cutRope/arrow1.png)
+}
+
+.leadStart .two {
+    width: .1rem;
+    height: .37rem;
+    left: .35rem;
+    top: .05rem;
+    background-image: url(../img/cutRope/arrow2.png)
+}
+
+.leadStart .three {
+    width: .795rem;
+    height: .59rem;
+    left: .4rem;
+    top: .1rem;
+    background-image: url(../img/cutRope/arrow3.png)
+}
+
+.leadStart .four {
+    width: 1.195rem;
+    height: .19rem;
+    left: 1rem;
+    top: .45rem;
+    background-image: url(../img/cutRope/arrow4.png)
+}
+
+.leadStart .pointer {
+    width: .245rem;
+    height: .36rem;
+    left: 1.1rem;
+    top: .5rem;
+    display: none;
+    position: absolute;
+    background-image: url(../img/cutRope/hand.png)
+}
+
+
+#needCredits {
+	line-height: 1.5;
+	position: absolute;
+	bottom: -0.22rem;
+	right: 0;
+	left: 0;
+	display: inline-block;
+	width: 1.2rem;
+	margin: 0 auto;
+	padding: 0 .1rem;
+	color: #cb0607;
+	font-weight: normal;
+}
+#needCredits .leftTime { 
+   color: #6b1f1f; 
+   font-size: 0.18rem;
+   font-weight: normal;
+   padding: 0 2px 0 2px;
+}
+
+#prize-list .iScrollLoneScrollbar{
+	display: none
+}
+
+#prize-list {
+	position: relative;
+	-ms-touch-action: none;
+	touch-action: none
+}
+
+#prize-list .prize-img {
+	width: .68rem
+}
+
+#prize-list .prize-name {
+	font-size: .1rem;
+	line-height: .12rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: block;
+	padding-top: 0.025rem;
+	display: none;
+}
+
+#prize-list .prize-img-box {
+	padding: 0;
+}
+
+#prize-list .prize-item {
+	display: inline-block; 
+	width: .7rem;
+	margin-right: 0.02rem;
+	text-align: center;
+}
+
+.apple {
+	line-height: .19rem
+}
+
+
+/* 横屏适配  */
+@media screen and (orientation: landscape) {   
+   body { max-width: 1024px; }
+   #db-content .banner img {
+     width: 3.2rem;
+     margin: 0 auto;
+     display: block;
+   }
+   .banner {
+	  height: 1.8rem;
+	  background-size: 4rem 1.8rem;
+	  background-position: center;
+   }
+} 
+.rule-modal .rule-modal-dialog header {
+	margin-bottom: .125rem;
+	margin-left: -0.1rem;
+	margin-right: -0.06rem;
+	padding: 0.1rem 0;
+	border-top-left-radius: 0.1rem;
+	border-top-right-radius: 0.1rem;
+    background-color: #a71829 !important;
+}
+
+/* 换肤替换 */
+body {
+	background-color: #602fbe !important;
+}
+.boxImg i {
+	background-image: url(../img/cutRope/bag.png) !important;
+}
+
+.boxImg.box2 i {
+	background-image: url(../img/cutRope/bag1.png) !important;
+}
+
+
+.boxImg.rope i { 
+    background-image: url(../img/cutRope/rope1.png) !important;
+}
+
+#db-content {
+	background-image: url(../img/cutRope/bg.jpg) !important;
+}
+
+.record {
+	background-image: url(../img/cutRope/record.png) !important;
+}
+
+.rule {
+	background-image: url(../img/rule.png) !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav i{     
+    border-top-color: #fff;
+	border-left-color: #fff;
+}
+.rule-modal .rule-modal-dialog {
+	background-color: #c22235 !important;
+	padding-top: 0;
+}
+
+.rule-modal .rule-modal-dialog section .probability {
+	background-color: #c22235 !important;
+}
+
+.rule-modal .rule-modal-dialog header span,.rule-modal .rule-modal-dialog section .description {
+	color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog header i {
+	background-color: #fff !important;
+	display:none;
+}
+
+.rule-modal .rule-modal-dialog .close {
+	color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav {
+	background-color: #d42d41 !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav span {
+	color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability.active .text {
+	color: #fff !important;
+}
+.prize-tag {
+	background-image: url(../img/cutRope/regard.png) !important;
+}
+
+

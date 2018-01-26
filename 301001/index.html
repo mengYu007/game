@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no" />
+<title>森林寻宝</title>
+<script src="../publicjs/resize_init.js"></script>
+<link rel="stylesheet" href="css/index_hitegg.css"/>
+<link rel="stylesheet" href="css/award1.css" />
+<link rel="stylesheet" href="../css/publiccss/common.css" />
+</head>
+<body>
+	<div id="db-content" style="display: block;">
+		<a class="record" href="javascript:;" onclick="seeShopingList();"></a>
+		<div class="rule"></div>
+		<div class="banner">
+		   <img class="theme" src="http://mdcdn.kuaiyou.com/interactionMedia/games/301001/img/banner.png">
+		   <i class="bglight"></i>
+		</div>
+		 <div id="guide">
+			<div class="bear"></div>
+			<span class="tree-blue"></span>
+			<span class="tree"></span>
+			<span class="xiaohongbao"></span>
+			<div class="rabbit"></div>
+			<div class="btnwaper">
+				<span class="hitbtn"></span>
+				<div class="circular"></div>
+				<div class="hand1"></div>
+			</div>
+			<div id="needCredits" class="needCredits">
+				<p></p>
+			</div>
+			<div class="bottom-bgwrp">
+				<div class="bottom-bg"></div>
+				<div class="btm-reward btm-reward1"></div>
+				<div class="btm-reward btm-reward2"></div>
+				<div class="btm-reward btm-reward3"></div>
+				<div class="btm-reward btm-reward4"></div>
+				<div class="btm-reward btm-reward5"></div>
+			</div>
+		</div>
+	</div>
+
+	<!--奖品-->
+
+	<div class="J_modalShowPrize coupon-modal-showPrize" style="display: none;">
+		<div class="gift">
+		        <div class="gift-shine"></div>
+		        <div class="gift-wrap">
+		        	<div class="gift-bag"></div>
+		        	<div class="giftbg"></div>
+		        </div>
+		</div>
+
+		<div class="coupon-modal-showPrize-dialog">
+			<span class="close coupon-modal-close"></span>
+			<div class="modal-light">
+		            <div class="l-shine"></div>
+		    </div>
+			<div class="modal-header"></div>
+			<div class="modal-body withoutCode">
+				<div class="body-header"></div>
+				<div class="coupon-wrapper">
+					<div class="coupon-image">
+						<img class="J_gotoDetail logandgo">
+					</div>
+				</div>
+				<div class="body-footer">
+					<!-- <span class="coupon-win"></span> -->
+					<button type="button" class="J_btnCoupon coupon-use">
+						<span></span>
+					</button>
+					<div class="hand">
+						<div class="handa"></div>
+						<div class="handb"></div>
+					</div>
+				</div>
+			</div>
+			<i class="decoration"></i>
+		</div>
+	</div>
+
+	<!--规则-->
+	<div class="rule-modal" style="display: none;">
+			<div class="rule-modal-dialog">
+				<header>
+					<span>活动说明</span>
+				</header>
+				<section>
+					<div class="description">
+						<div class="nav">
+						</div>
+						<div class="description_text text">
+						</div>
+					</div>
+					<div class="probability">
+						<div class="nav">
+						</div>
+						<div class="probability_text text">
+						</div>
+					</div>
+				</section>
+				<div class="close"></div>
+			</div>
+
+		</div>
+	<!--设备达到点击次数后弹出跳转框，可切换游戏-->
+	<div id="recommend-modal" class="recommend-modal"
+		style="display: none;">
+		<div class="recommend-modal-dialog">
+			<i class="close"></i>
+			<div class="recommend-body1">
+				<a class="fuli" href=""></a>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- 谢谢参与 -->
+	<div class="db-msg-modal" id="thanks" style="display: none;">
+		<div class="msg-modal-wrapper">
+			<div class="msg-modal-header">
+				<i class="msg-modal-close"></i>
+				<h4 class="msg-title">谢谢参与！</h4>
+				<p class="msg-tip">再试一遍吧~</p>
+			</div>
+			<div class="msg-modal-section">
+				<!-- <img src="http://mdcdn.kuaiyou.com/interactionMedia/games/img/thanks/thanks1.png" /> -->
+			</div>
+			<div class="msg-modal-footer">
+				<a href="javascript:;" class="msg-btn">再试一遍</a>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../publicjs/jquery.min.js"></script>
+	<script type="text/javascript" src="../publicjs/jquery.cookie.js"></script>
+	<script type="text/javascript" src="../publicjs/iscroll.js"></script>
+	<script type="text/javascript" src="../publicjs/jquery.transit.js"></script>
+	<!-- 加载公用js-->
+	<script type="text/javascript" src="../publicjs/game.js"></script>
+	<script src="../component/rule/createrule.js"></script>
+	<script src="../component/thanks/createthanks.js"></script>
+	<script type="text/javascript">
+	var data = {'id':101,'leftTimes':1,'success':true,data:{
+    "clkTrakings": [
+    "http:\/\/test2014.adview.cn:8088\/agent\/click?st=&uuidEncType=0&sv=&src=1&sy=1&nt=&adi=20170915-100522_h7WkUdcb_1-254-5np5-1_1&bi=com.test&ai=j4hIg14BAAAeIwpUQCUoJ76cNlUQfatSioQPSmUZ3Et5F5xZhljVcxjhhhtenWvEQxu7cxN8dmxGf8Qf2XrJLs1QMtorCcEFQ2CROUtZ-PYVcRY350gj4ZQfsO8DUtsJ_GxZrj714-CINmauq4g4Sf1IXG8VqbDTEeuDlVGVc7Tay_D46oRvgMM9qVh94oA&ud=726E3808-134A-43AC-9607-E43876EA487B&as=&se=&cv=&rqt=6&ti=1505441127&tm=0&to=b8996008031c1deb116402d5e604f760&aid=SDK20150921090557wlj7sksdgdg860h&ro=1&ca=0"
+  ],
+  "detailDesc": "<div><strong><strong><img src=\"\/\/yun.duiba.com.cn \/tuia\/img\/rg0it6kr56.jpg\"\/><br\/><\/strong><\/strong><h3><strong>使用流程<\/strong><\/h3><ol class=\" list-paddingleft-2\"><li><p>点击马上使用，进入产品订购页面，点击立即抢购<\/p><\/li><li><p>选择产品，正确填写收货信息，提交订单（错误地址将导致发货失败）<\/p><\/li><li><p>新增的<br\/><\/p><\/li><\/ol><h3><strong>使用规则<\/strong><br\/><\/h3><ul class=\" list-paddingleft-2\"><li><p>仅限新用户兑换使用一次，不可与其他优惠叠加使用<\/p><\/li><li><p>如有商品详情咨询，下单流程，发货，售前\/售后服务等问题，请致电商家客服电话：4009260511<\/p><\/li><li><p>如有券码问题，可直接联系客服专线：400-080-6659或客服QQ：4000806659 （工作日9:30至18:30）<\/p><\/li><\/ul><\/div>",
+  "buttonText": "现在领取",
+  "impTrakings": [   "http:\/\/test2014.adview.cn:8088\/agent\/display?st=&uuidEncType=0&sv=&src=1&sy=1&nt=&adi=20170915-100522_h7WkUdcb_1-254-5np5-1_1&bi=com.test&ai=j4hIg14BAAAeIwpUQCUoJ76cNlUQfatSioQPSmUZ3Et5F5xZhljVcxjhhhtenWvEQxu7cxN8dmxGf8Qf2XrJLs1QMtorCcEFQ2CROUtZ-PYVcRY350gj4ZQfsO8DUtsJ_GxZrj714-CINmauq4g4Sf1IXG8VqbDTEeuDlVGVc7Tay_D46oRvgMM9qVh94oA&ud=726E3808-134A-43AC-9607-E43876EA487B&as=&se=&cv=&rqt=6&ti=1505441127&tm=0&to=b8996008031c1deb116402d5e604f760&aid=SDK20150921090557wlj7sksdgdg860h&ro=1&ca=0"
+  ],
+  "endUrl": "http://www.adview.com",
+  "success": true,
+  "detailImg": "http:\/\/test2014.adview.cn:8088\/h7wkudcb20170912133735335000_640_300.gif",
+  "icon": "http:\/\/test2014.adview.cn:8088\/h7wkudcb20170912133730786000_225_140.png",
+  "popImg": ".http://mdcdn.kuaiyou.com/interactionMedia/games/300001/img/ad.png",
+  "title": "测试标题"
+  }};
+	   	/** 是否还有游戏次数，isRender:true|false，是否执行renderElement ,running：false|true 动画状态 */
+		var hasNoTimes = false, isRender, running = false;
+		var clkTrakings;//点击监测地址
+		/** 页面动画初始化，获取规则，渲染游戏次数  */
+		$(function() {
+			reset();
+			getInfo(data,301001);
+		});
+		/** 点击抽奖 */
+		$(".hitbtn").click(function () {
+			running || (hasNoTimes ? showModal("recommend-modal") : gamestart());
+		});
+		function gamestart() {
+			if (!running) {
+				running = true;
+				data.leftTimes--;
+				$(".bear").addClass("bear2");
+				$(".tree").addClass("tree-head");
+				var num = randomNum(0,4);
+				switch (num){
+					case 0:
+						$(".xiaohongbao").addClass("xiaohongbao0");
+						break;
+					case 1:
+						$(".xiaohongbao").addClass("xiaohongbao1");
+						break;
+					case 2:
+						$(".xiaohongbao").addClass("xiaohongbao2");
+						break;
+					case 3:
+						$(".xiaohongbao").addClass("xiaohongbao3");
+						break;
+					case 4:
+						$(".xiaohongbao").addClass("xiaohongbao4");
+						break;
+					default:
+		                $(".xiaohongbao").addClass("xiaohongbao");
+		                break;
+				}
+				var timers=setTimeout(function(){
+					reset();
+				},700)
+				var url = getCreative();
+				if (url == "thanks") {
+					showModal("thanks");
+				} else {
+					var timer1 = setTimeout(function(){
+						$(".J_modalShowPrize").show();
+						$(".gift").show();
+					},1000)
+					var timer2 = setTimeout(function(){
+						$(".gift").hide();
+					},2500)
+					var timer3 = setTimeout(function () {
+						$(".coupon-modal-showPrize-dialog").show();
+						reset();
+					}, 3000)
+				}
+
+				if (isRender) {
+					renderElement(data.leftTimes, false);
+				}
+			}
+		}
+		//规则
+		function getRule(amount,r_describe,odds_describe){
+			var result={"code":"00000","data":{"limitTimes":amount,"prizes":8,"name":"测试3","desc":r_describe,"leftTimes":amount,"title":"11","rateInfo":odds_describe},"success":true,"desc":""};
+			var data=result.data;
+			renderElement(data.leftTimes,false);
+		   $(".rule-modal .description_text").html(data.desc);
+		   $(".rule-modal .probability_text").html(data.rateInfo);
+		}
+
+		//次数
+		function renderElement(leftTimes,flag){
+			$(".needCredits p").html((leftTimes==-1) ? '不限次数' : (leftTimes ? "您还有 <span style='color:#359c1d;font-size: 0.15rem;' id='leftTime'>"+ leftTimes +"</span> 次机会": "抽奖机会已用完")).show();
+			(leftTimes==-1) ? hasNoTimes = !1 : (leftTimes ? hasNoTimes = !1 : (hasNoTimes = !0,flag==true?showModal('recommend-modal'):1));
+			(leftTimes==-1) ? isRender = false : isRender = true;
+		}
+
+		/*重置函数*/
+		function reset(){
+			running = false;
+			$(".bear").removeClass("bear2");
+			$(".tree").removeClass("tree-head");
+			$(".xiaohongbao").removeClass("xiaohongbao0 xiaohongbao1 xiaohongbao2 xiaohongbao3 xiaohongbao4");
+		}
+
+		/** 关闭奖品弹框按钮 */
+		$(".J_modalShowPrize .coupon-modal-close").on("click", function() {
+			document.touchmove = null;
+			$(".J_modalShowPrize").hide();
+			$(".coupon-modal-showPrize-dialog").hide();
+			reset();
+		});
+
+		/** 谢谢参与关闭 */
+		$(".db-msg-modal").off("click").on("click", ".msg-modal-close",function() {
+			$(".db-msg-modal").hide();
+		    $("#db-content").removeClass("filter");
+		    reset();
+		}).on("click", ".msg-btn",function() {
+			$(".db-msg-modal").hide();
+		    $("#db-content").removeClass("filter");
+		    reset();
+		});
+		//生成随机函数
+	    function randomNum(minNum, maxNum) {
+	        switch (arguments.length) {
+	            case 1:
+	                return parseInt(Math.random() * minNum + 1, 10);
+	                break;
+	            case 2:
+	                return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+	                break;
+	            default:
+	                return 0;
+	                break;
+	        }
+		}
+		bottomTip();
+</script>
+</body>
+</html>

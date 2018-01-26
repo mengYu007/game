@@ -1,0 +1,551 @@
+/*  页面整体布局  */
+
+@charset "utf-8";
+
+*,a:active {
+    outline: 0
+}
+
+body,input {
+    width: 100%
+}
+
+.placeholder,button,html,input,textarea {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif
+}
+
+.eggs::after,.eggs::after:after,.probability-rules header::after:after {
+    clear: both
+}
+
+.probability-rules header .line.right,.record {
+    right: 0
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased
+}
+
+body {
+    line-height: 1;
+    overflow-x: hidden;
+    max-width: 640px;
+    margin: 0 auto;
+    color: #333;
+    background-color: #f0f0f0;
+    -webkit-overflow-scrolling: touch;
+    -webkit-touch-callout: none;
+    font-size: .12rem
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
+    display: block
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+b,strong {
+    font-weight: 700
+}
+
+dfn {
+    font-style: normal
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0
+}
+
+button,input,textarea {
+    font-size: .12rem;
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+textarea {
+    resize: none
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse
+}
+
+td,th {
+    padding: 0
+}
+
+blockquote,figure,form,h1,h2,h3,h4,h5,h6,p {
+    margin: 0
+}
+
+dd,dl,li,ol,ul {
+    margin: 0;
+    padding: 0
+}
+
+li,ol,ul {
+    list-style: none
+}
+
+input {
+    height: .34rem;
+    padding: 0 .1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: .04rem
+}
+
+.placeholder {
+    text-align: left;
+    color: #999
+}
+
+input:-moz-placeholder,textarea:-moz-placeholder {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input:-moz-placeholder :-moz-placeholder,
+textarea:-moz-placeholder :-moz-placeholder,
+input:-moz-placeholder ::-webkit-input-placeholder,
+textarea:-moz-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+input::-moz-placeholder,textarea::-moz-placeholder {
+    opacity: 1;
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input::-moz-placeholder :-moz-placeholder,
+textarea::-moz-placeholder :-moz-placeholder,
+input::-moz-placeholder ::-webkit-input-placeholder,
+textarea::-moz-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+input:-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input:-ms-input-placeholder :-moz-placeholder,
+textarea::-ms-input-placeholder :-moz-placeholder,
+input:-ms-input-placeholder ::-webkit-input-placeholder,
+textarea::-ms-input-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input::-webkit-input-placeholder :-moz-placeholder,
+textarea::-webkit-input-placeholder :-moz-placeholder,
+input::-webkit-input-placeholder ::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+.hidden {
+    display: none!important;
+    visibility: hidden!important
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+#db-content {
+    position: relative;
+    display: none;
+    overflow: hidden;
+    width: 3.2rem;
+	background-repeat: no-repeat;
+    background-size: 100% 5.04rem;
+   
+}
+
+.main {
+    width: 3.2rem;
+	margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: .2rem;
+    background-repeat: no-repeat;
+    background-size: 100% 6.32rem
+}
+
+.chuizi,.eggs .egg,.record {
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+
+.record {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: .6rem;
+    height: .55rem;
+}
+
+.fliter {
+    -webkit-filter: blur(.025rem);
+    filter: blur(.025rem)
+}
+
+.myCredits {
+    position: relative;
+    height: .18rem
+}
+
+.myCredits p {
+    font-size: .1rem;
+    line-height: .18rem;
+    position: absolute;
+    left: 50%;
+    display: block;
+    padding: 0 .07rem;
+    -webkit-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    border-radius: .05rem
+}
+
+.eggs,.eggs .egg {
+    position: relative
+}
+
+.needCredits {
+    margin-top: .18rem;
+    text-align: center
+}
+
+.needCredits p {
+	color:#ab09d8;
+}
+
+.eggs {
+    overflow: hidden;
+    padding: 0 0 0 0.2rem;
+}
+
+.eggs.two {
+    padding: 0 .34rem
+}
+ 
+.eggs.two .egg {
+    margin-right: .175rem;
+    margin-left: .175rem
+}
+
+.eggs.four .egg:nth-child(4) {
+    margin-left: .97rem
+}
+
+.eggs.five .egg:nth-child(4) {
+    margin-right: .35rem;
+    margin-left: .37rem
+}
+
+.eggs.five .egg:nth-child(5) {
+    margin-left: 0
+}
+
+.eggs.seven .egg:nth-child(7) {
+    margin-left: .99rem
+}
+
+.eggs.eight .egg:nth-child(7) {
+    margin-right: .35rem;
+    margin-left: .39rem
+}
+
+.eggs.eight .egg:nth-child(8) {
+    margin-left: 0
+}
+
+.eggs .egg {
+    float: left;
+    width: 1rem;
+    height: 1rem;
+    margin: .2rem 0 0
+}
+
+.eggs .egg:nth-child(7),.eggs .egg:nth-child(8) {
+    display: none
+}
+
+.eggs .egg.jump {
+    top: -.2rem
+}
+
+.eggs::after {
+    display: table;
+    content: ''
+}
+
+.eggs::after:after,.eggs::after:before {
+    display: table;
+    content: ""
+}
+.egg.active i.cur {
+	background-image: url(../../img/hitEgg/skin_1/eggactive.png);
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    top: -0.55rem;
+    left: -0.4rem;
+}
+.chuizi {
+    position: absolute;
+    top: -.15rem;
+    left: 2.65rem;
+    width: .43rem;
+    height: .42rem;
+    -webkit-transform-origin: right bottom;
+    transform-origin: right bottom;
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg)
+}
+
+.chuizi.jump {
+    -webkit-transform: rotate(0);
+    transform: rotate(0)
+}
+
+.prize-list {
+	height: 0.87rem;
+    margin: 0 auto;
+    padding: .18rem 0 0.09rem;
+    position: relative;
+    -ms-touch-action: none;
+    touch-action: none
+}
+
+.prize-tag,.rule {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+
+.prize-list[data-length="2"] .swiper-slide:first-child {
+    margin-right: .58rem;
+    margin-left: .54rem
+}
+
+.prize-list[data-length="3"] .swiper-slide {
+    margin: 0 .13rem
+}
+
+.prize-list[data-length="3"] .swiper-slide:first-child {
+    margin-left: .26rem
+}
+
+.prize-list .prize-item {
+	display: inline-block; 
+    width: .8rem;
+    margin-right: 0.05rem;
+}
+
+.prize-list .swiper-wrapper {
+    -webkit-transform: translate3d(30px,0,0);
+    transform: translate3d(30px,0,0)
+}
+
+.prize-list .swiper-slide {
+    width: .675rem;
+    margin-right: .2325rem
+}
+
+.prize-list .prize-img-box {
+    overflow: hidden;
+    width: .9rem;
+    height: .6rem;
+    padding-right: 0.15rem;
+    border: .01rem solid #276c36;
+}
+
+.prize-list .prize-img {
+    display: block;
+    width: .9rem;
+    margin: .0
+}
+
+.prize-list .prize-name {
+    font-size: .1rem;
+    padding: .03rem 0;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #fff;
+	display: none;
+}
+
+.prize-tag {
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: .405rem;
+    height: .405rem
+}
+
+.swiper-container-horizontal>.swiper-scrollbar {
+    bottom: .04rem;
+    height: .035rem;
+    background-color: rgba(0,0,0,.2)
+}
+
+.rule {
+    top: .09rem;
+    left: .15rem;
+    width: .46rem;
+    height: .17rem;
+    cursor: pointer
+}
+.rule-modal .rule-modal-dialog {
+    padding-top: 0;
+}
+.rule-modal .rule-modal-dialog header {
+    margin-bottom: .125rem;
+    margin-left: -0.1rem;
+    margin-right: -0.06rem;
+	padding: 0.1rem 0;
+	border-top-left-radius: 0.1rem;
+    border-top-right-radius: 0.1rem;
+	background: #5b94ff;
+}
+.banner {
+    height: 1.8rem;
+    margin-bottom: .05rem;
+	/*background: url(../../img/banner2.png) no-repeat center 0.08rem;
+	background-size: 3.2rem 1.78rem;*/
+}
+
+/* 横屏适配  */
+@media screen and (orientation: landscape) {  
+   #db-content { 
+      background-size: cover;
+	  width: 100%;
+   }
+   .banner {
+	  height: 2.3rem;
+      background-size: 4rem 2.2rem;
+   }
+} 
+
+/* 换肤功能替换下面，动态生成  */
+
+body {
+	background-color: #4b98fe !important;
+}
+#db-content{ background-image:url(../img/hitEgg/bg2.png) !important;}
+
+.record {
+	background-image: url(../img/hitEgg/record.png) !important;
+}
+
+.prize-list {
+	background-color: #de40f9!important;
+}
+
+.prize-tag {
+	background-image: none!important;
+}
+
+.apple {
+	color: #fff !important;
+}
+
+.apple {
+	background-color: #dcad0e !important;
+}
+
+.egg {
+	background-image: url(../img/hitEgg/egg.png) !important;
+}
+
+.egg.active {
+	background-image: none !important;
+}
+.egg.active i.cur {
+	background-image: url(../img/hitEgg/eggactive.png) !important;
+}
+.egg.jump {
+	background-image: url(../img/hitEgg/egg.png) !important;
+}
+
+.chuizi {
+	background-image: url(../img/hitEgg/zhuizi.png) !important;
+}
+
+.prize-list .prize-img-box{border-color: #de40f9;}
+
+.rule {
+	background-image: url(../img/rule.png) !important;
+}
+
+.rule-modal .rule-modal-dialog {
+	background-color: #4c81e9 !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability {
+	background-color: #4c81e9 !important;
+}
+
+.rule-modal .rule-modal-dialog header span,
+.rule-modal .rule-modal-dialog section .description {
+	color: #ffffff !important;
+}
+
+.rule-modal .rule-modal-dialog header i {
+	background-color: #5b94ff !important;
+}
+
+.rule-modal .rule-modal-dialog header {
+	background: #5b94ff;
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav {
+	background-color: #f2ba0d !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav span {
+	color: #ffffff !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability.active .text {
+	color: #ffffff !important;
+}
+.rule-modal .rule-modal-dialog section .probability .nav i{
+	border-top-color: #ffffff !important;
+	border-left-color: #ffffff !important;
+}
+

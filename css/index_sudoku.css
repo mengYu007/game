@@ -1,0 +1,597 @@
+/*  页面整体布局  */
+
+@charset "utf-8";
+
+*,a:active {
+    outline: 0
+}
+
+body,input {
+    width: 100%
+}
+
+.placeholder,button,html,input,textarea {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif
+}
+
+#start span,b,strong {
+    font-weight: 700
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased
+}
+
+body {
+    line-height: 1;
+    overflow-x: hidden;
+    max-width: 640px;
+    margin: 0 auto;
+    color: #333;
+    background-color: #f0f0f0;
+    -webkit-overflow-scrolling: touch;
+    -webkit-touch-callout: none;
+    font-size: .12rem
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
+    display: block
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+dfn {
+    font-style: normal
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0
+}
+
+button,input,textarea {
+    font-size: .12rem;
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+textarea {
+    resize: none
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse
+}
+
+td,th {
+    padding: 0
+}
+
+blockquote,figure,form,h1,h2,h3,h4,h5,h6,p {
+    margin: 0
+}
+
+dd,dl,li,ol,ul {
+    margin: 0;
+    padding: 0
+}
+
+li,ol,ul {
+    list-style: none
+}
+
+input {
+    height: .34rem;
+    padding: 0 .1rem;
+    text-align: left;
+    border: 1px solid #ddd;
+    border-radius: .04rem
+}
+
+.placeholder {
+    text-align: left;
+    color: #999
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input:-moz-placeholder :-moz-placeholder,
+textarea:-moz-placeholder :-moz-placeholder,
+input:-moz-placeholder ::-webkit-input-placeholder,
+textarea:-moz-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    opacity: 1;
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input::-moz-placeholder :-moz-placeholder,
+textarea::-moz-placeholder :-moz-placeholder,
+input::-moz-placeholder ::-webkit-input-placeholder,
+textarea::-moz-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+input:-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+input:-ms-input-placeholder :-moz-placeholder,
+textarea::-ms-input-placeholder :-moz-placeholder,
+input:-ms-input-placeholder ::-webkit-input-placeholder,
+textarea::-ms-input-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+    text-align: left;
+    color: #999
+}
+
+#start span,.apple,.myCredits,.needCredits {
+    text-align: center
+}
+
+input::-webkit-input-placeholder :-moz-placeholder,
+textarea::-webkit-input-placeholder :-moz-placeholder,
+input::-webkit-input-placeholder ::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder ::-webkit-input-placeholder {
+    color: #ddd
+}
+
+.hidden {
+    display: none!important;
+    visibility: hidden!important
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.clearfix {
+    display: table;
+    clear: both;
+    content: ''
+}
+
+#db-content {
+    position: relative;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: 100% 5.34rem;
+    height: 5.34rem
+}
+
+.record {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: .6rem;
+    height: .55rem;
+    z-index: 10
+}
+
+.banner {
+	position: relative;
+    height: 1.1rem;
+	background: url(../img/banner5.png) no-repeat center 0.08rem;
+	background-size: 3.2rem 1.1rem;
+}
+
+@-webkit-keyframes pulseBtn {
+    from,to {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+
+    50% {
+        -webkit-transform: scaleY(1.1);
+        transform: scaleY(1.1);
+    }
+}
+
+@keyframes pulseBtn {
+    from,to {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+
+    50% {
+        -webkit-transform: scaleY(1.1);
+        transform: scaleY(1.1);
+    }
+}
+.record,.rule {
+    background-size: 100% 100%
+}
+.rule {
+    position: absolute;
+	display: none;
+    top: .09rem;
+    left: .15rem;
+    width: .46rem;
+    height: .17rem;
+    cursor: pointer;
+    background-repeat: no-repeat
+}
+.filter {
+    filter: blur(5px);
+    -webkit-filter: blur(5px)
+}
+
+.prize-detail-dialog .prize-detail-slideup {
+    width: .48rem;
+    height: .48rem;
+    background-image: url("../img/prize-detail-btn.png")!important;
+    background-size: .48rem .48rem
+}
+
+.giveup-modal,.recommand-modal {
+    display: none
+}
+
+.rule-modal .rule-modal-dialog header i {
+    background-color: #fff
+}
+
+.rule-modal .close,.rule-modal .rule-modal-dialog header span,
+.rule-modal .rule-modal-dialog section .description,
+.rule-modal .rule-modal-dialog section .probability .text {
+    color: #fff
+}
+.rule-modal .rule-modal-dialog {
+	padding-top: 0;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+.rule-modal .rule-modal-dialog header {
+	margin-bottom: .125rem;
+	margin-left: -0.1rem;
+	margin-right: -0.06rem;
+	padding: 0.1rem 0;
+	border-top-left-radius: 0.1rem;
+	border-top-right-radius: 0.1rem;
+	background: #5b94ff;
+}
+.light-group.default {
+	position:absolute;
+    top: 0.11rem;
+    left: 0.02rem;
+    width: 2.745rem;
+    height: 2.78rem;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.lottery-wrapper{
+    display:block;
+    position:relative;
+    width: 2.8rem;
+    height: 3rem;
+    margin: 0.07rem auto 0;
+    background:url(../img/lottery-bg.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+.lottery-wrapper .lottery-area{
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+.lottery-wrapper .lottery-area>li{
+    position:absolute;
+    display:inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.lottery-wrapper .lottery-area>li.active{
+    /*background: #90d1e3;
+    box-shadow: 0 -0.015rem 0.015rem 0.01rem #feb501 inset;*/
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.lottery-wrapper .lottery-area>li.one{
+    left: 0.18rem;
+    top: 0.285rem;
+}
+.lottery-wrapper .lottery-area>li.two{
+    left: 1rem;
+    top: 0.285rem;
+}
+.lottery-wrapper .lottery-area>li.three{
+    left: 1.82rem;
+    top: 0.285rem;
+}
+.lottery-wrapper .lottery-area>li.four{
+    left: 1.82rem;
+    top: 1.11rem;
+}
+.lottery-wrapper .lottery-area>li.five{
+    left: 1.82rem;
+    top: 1.925rem;
+}
+.lottery-wrapper .lottery-area>li.six{
+    left: 1rem;
+    top: 1.925rem;
+}
+.lottery-wrapper .lottery-area>li.seven{
+    left: 0.18rem;
+    top: 1.925rem;
+}
+.lottery-wrapper .lottery-area>li.eight{
+    left: 0.18rem;
+    top: 1.11rem;
+}
+
+.lottery-wrapper .lottery-area>li>span.img{ 
+	display: block;
+	width: 0.8rem;
+    height: 0.8rem;
+    margin-left: 0rem;
+    margin-top: 0rem;
+	background:url(../../img/red-pocket.png) 0 0 no-repeat; 
+	background-size:contain ;
+}
+.lottery-wrapper .lottery-area>li.one.active span {  
+   background-image: url(../img/jiugongge/H5_15_active.png)!important;
+}
+.lottery-wrapper .lottery-area>li.two.active span {  
+   background-image: url(../img/jiugongge/H5_03_active.png)!important;
+}
+.lottery-wrapper .lottery-area>li.three.active span {  
+   background-image: url(../img/jiugongge/H5_05_active.png)!important;
+}
+.lottery-wrapper .lottery-area>li.four.active span {  
+   background-image: url(../img/jiugongge/H5_07_active.png)!important;
+}
+.lottery-wrapper .lottery-area>li.five.active span {  
+   background-image: url(../img/jiugongge/H5_16_active.png)!important;
+}
+.lottery-wrapper .lottery-area>li.six.active span {  
+   background-image: url(../img/jiugongge/H5_22_active.png)!important;
+}
+.lottery-wrapper .lottery-area>li.seven.active span {  
+   background-image: url(../img/jiugongge/H5_20_active.png)!important;
+}
+.lottery-wrapper .lottery-area>li.eight.active span {  
+   background-image: url(../img/jiugongge/H5_21_active.png)!important;
+}
+
+.lottery-wrapper .lottery-area>li>span.name{
+    position:absolute;
+    bottom: 0.06rem;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    line-height: 0.2rem;
+    font-size: 0.12rem;
+    text-align: center;
+    color:#da1625;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	display: none;
+}
+.lottery-wrapper .begin-lottery{
+    cursor:pointer;
+    position:absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 0.79rem;
+    height: 0.79rem;
+    background:url(../img/startbtn5.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+.needCredits {
+	width: 100%;
+	margin-top: 0.2rem;
+}
+.needCredits p {
+	display: inline-block;
+	padding: 0.07rem;
+	border: 2px solid #be0106;
+	border-radius: 50px;
+	color: #fff799;
+	font-weight: bold;
+	text-align: center;
+    font-size: 0.14rem;
+}
+
+/* 横屏适配  */
+@media screen and (orientation: landscape) {   
+   body { max-width: 1024px; }
+   #db-content { 
+      background-size: cover;
+      height: 5.35rem; 
+   }
+   .banner {
+	  height: 1.8rem;
+	  background-size: 4rem 1.8rem;
+   }
+} 
+
+.bottomLink{
+	position: relative;
+	margin-top: 0.11rem;
+	text-align: center;
+}
+.bottomLink .icon {
+	display: inline-block;
+	width:0.6rem;
+	height: 0.27rem;
+	background-size: 100% 100%;
+}
+.bottomLink .rule {
+	position: static;
+	margin-right: 0.12rem;
+	background-image: url(../img/jiugongge/rule.png) !important;
+}
+.bottomLink .award {
+	background-image: url(../img/jiugongge/award.png) !important;
+}
+
+/* 换肤功能替换下面的 */
+body {
+	background-color: #e7292b !important;
+}
+#db-content {
+	background-image: url(../img/sudoku/bg.png) !important;
+}
+.record {
+	background-image: url(../img/sudoku/record.png) !important;
+}
+.lottery-wrapper {
+	background-image:url(../img/sudoku/lottery-bg.png);
+}
+.lottery-wrapper .begin-lottery {
+	background-image:url(../img/sudoku/startbtn.png);
+}
+.lottery-wrapper .begin-lottery.disabled {
+	background-image:url(../img/sudoku/startbtn_disabled.png);
+}
+.light-group.default {
+	background-image: url(../img/sudoku/radius-1.png);
+}
+.light-group.default.toggle {
+    background-image: url(../img/sudoku/radius-2.png);
+}
+.banner {
+	background-image: url(../img/sudoku/banner.png);
+}
+/* 规则皮肤1-深红色 */
+.rule {
+	background-image: url(../img/rule.png) !important;
+}
+
+.rule-modal .rule-modal-dialog {
+	background-color: #e71f19 !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability {
+	background-color: #e71f19 !important;
+}
+
+.rule-modal .rule-modal-dialog header span,
+.rule-modal .rule-modal-dialog section .description {
+	color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog header {
+	background: #e71f19;
+}
+
+.rule-modal .rule-modal-dialog header i {
+	background-color: #e71f19 !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav {
+	background-color: #f96064 !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav span {
+	color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability.active .text {
+	color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav i {
+	border-top-color: #fff !important;
+	border-left-color: #fff !important;
+}
+.rule-modal  .close {
+	position: absolute;
+    bottom: 0.7rem;
+    width: .3rem;
+    height: .3rem;
+    left: 50%;
+    margin-left: -0.15rem;
+	background: url(../img/jiugongge/ruleClose.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.hand { 
+    position: absolute;
+    display: inline-block;
+    background-repeat: no-repeat;
+    width: .535rem;
+    height: .535rem;
+    left: 1.7rem;
+    top: 2.67rem;
+    z-index: 2;
+    background-image: url(../img/sudoku/hand.png);
+    -webkit-animation: guideHand2 .5s step-start infinite;
+    animation: guideHand2 .5s step-start infinite;
+    background-size: cover;
+}
+@-webkit-keyframes guideHand2 {
+    0% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: -.535rem 0
+    }
+}
+
+@keyframes guideHand2 {
+    0% {
+        background-position: 0 0
+    }
+
+    50% {
+        background-position: -.535rem 0
+    }
+}
+

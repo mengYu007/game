@@ -1,0 +1,686 @@
+@charset "utf-8";
+
+*,a:active {
+	outline: 0
+}
+
+body,input {
+	width: 100%
+}
+
+.placeholder,button,html,input,textarea {
+	font-family: 'Microsoft Yahei','Helvetica Neue',Helvetica,Hiragino Sans GB,STHeiTi,Arial,sans-serif
+}
+
+* {
+	box-sizing: border-box
+}
+
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-font-smoothing: antialiased
+}
+
+body {
+	line-height: 1;
+	overflow-x: hidden;
+	max-width: 640px;
+	margin: 0 auto;
+	color: #333;
+	background-color: #f0f0f0;
+	-webkit-overflow-scrolling: touch;
+	-webkit-touch-callout: none
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {
+	display: block
+}
+
+a {
+	text-decoration: none;
+	color: inherit
+}
+
+b,strong {
+	font-weight: 700
+}
+
+dfn {
+	font-style: normal
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0
+}
+
+button,input,textarea {
+	font-size: .12rem;
+	margin: 0;
+	padding: 0;
+	border: 0
+}
+
+textarea {
+	resize: none
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse
+}
+
+td,th {
+	padding: 0
+}
+
+blockquote,figure,form,h1,h2,h3,h4,h5,h6,p {
+	margin: 0
+}
+
+dd,dl,li,ol,ul {
+	margin: 0;
+	padding: 0
+}
+
+li,ol,ul {
+	list-style: none
+}
+
+input {
+	height: .34rem;
+	padding: 0 .1rem;
+	text-align: left;
+	border: 1px solid #ddd;
+	border-radius: .04rem
+}
+
+.placeholder {
+	text-align: left;
+	color: #999
+}
+
+input:-moz-placeholder,textarea:-moz-placeholder {
+	font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+	text-align: left;
+	color: #999
+}
+
+input:-moz-placeholder :-moz-placeholder,textarea:-moz-placeholder :-moz-placeholder {
+	color: #ddd
+}
+
+input:-moz-placeholder ::-webkit-input-placeholder,textarea:-moz-placeholder ::-webkit-input-placeholder {
+	color: #ddd
+}
+
+input::-moz-placeholder,textarea::-moz-placeholder {
+	opacity: 1;
+	font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+	text-align: left;
+	color: #999
+}
+
+input::-moz-placeholder :-moz-placeholder,textarea::-moz-placeholder :-moz-placeholder {
+	color: #ddd
+}
+
+input::-moz-placeholder ::-webkit-input-placeholder,textarea::-moz-placeholder ::-webkit-input-placeholder {
+	color: #ddd
+}
+
+input:-ms-input-placeholder,textarea::-ms-input-placeholder {
+	font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+	text-align: left;
+	color: #999
+}
+
+input:-ms-input-placeholder :-moz-placeholder,textarea::-ms-input-placeholder :-moz-placeholder {
+	color: #ddd
+}
+
+input:-ms-input-placeholder ::-webkit-input-placeholder,textarea::-ms-input-placeholder ::-webkit-input-placeholder {
+	color: #ddd
+}
+
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+	font-family: 'Helvetica Neue',Helvetica,Hiragino Sans GB,'Microsoft Yahei',STHeiTi,Arial,sans-serif;
+	text-align: left;
+	color: #999
+}
+
+input::-webkit-input-placeholder :-moz-placeholder,textarea::-webkit-input-placeholder :-moz-placeholder {
+	color: #ddd
+}
+
+input::-webkit-input-placeholder ::-webkit-input-placeholder,textarea::-webkit-input-placeholder ::-webkit-input-placeholder {
+	color: #ddd
+}
+
+#needCredits,#prize-list .prize-name,.apple {
+	text-align: center;
+	color: #fff
+}
+
+.hidden {
+	display: none!important;
+	visibility: hidden!important
+}
+
+.fl {
+	float: left
+}
+
+.fr {
+	float: right
+}
+
+body {
+	font-size: .1rem
+}
+
+#db-content {
+	display: block;
+	width: 3.2rem;
+	height: 5.38rem;
+	background-size: 100% 100%
+}
+
+#db-content .banner {
+	position: relative;
+	height: 1.6rem
+}
+
+#db-content .banner .record,
+#db-content .banner .rule,
+#db-content .banner .card-shake {
+	position: absolute;
+	background-size: 100% 100%;
+	display: inline-block
+}
+
+#db-content .banner img {
+	margin-top: .085rem
+}
+
+#db-content .banner .record {
+	top: .03rem;
+	right: 0;
+	width: .488rem;
+	height: .24rem;
+}
+#db-content .banner .card-shake {
+	top: 0.3rem;
+	left: 60%;
+	width: 0.4rem;
+	height: 0.4rem;
+	background-image: url(../img/cardShake.png) !important;
+}
+#db-content .banner .card-shake.shake {
+	-webkit-animation: cardShake2 .5s linear infinite;
+	animation: cardShake2 .5s linear infinite;
+	 -moz-transform-origin: 45% 75%;
+  -webkit-transform-origin: 45% 75%;
+       -o-transform-origin: 45% 75%;
+      -ms-transform-origin: 45% 75%;
+          transform-origin: 45% 75%;
+}
+
+#db-content .banner .rule {
+	top: .03rem;
+	left: .03rem;
+	width: .488rem;
+	height: .24rem;
+}
+
+#db-content .poker-table {
+	position: relative;
+	height: 2.66rem
+}
+
+#db-content .poker-table .dealer {
+	position: absolute;
+	top: -.7rem;
+	left: 50%;
+	width: 1.2rem;
+	-webkit-transform: translate(-49%,0);
+	transform: translate(-49%,0)
+}
+
+#db-content .poker-table .card-wrapper {
+	position: absolute;
+	bottom: -0.21rem;
+	overflow: hidden;
+	width: 100%;
+	height: 2.5rem
+}
+
+#db-content .poker-table .card-wrapper .card {
+	position: absolute;
+	display: inline-block;
+	width: .85rem;
+	height: 1.11rem;
+	transition: all .3s;
+	background-size: 100% 100%
+}
+
+#db-content .poker-table .card-wrapper .card.active {
+	z-index: 100;
+	top: .5rem;
+	left: 53.5%;
+	-webkit-transform: translate(-50%,0) scale(1.5,1.5);
+	transform: translate(-50%,0) scale(1.5,1.5)
+}
+
+#db-content .poker-table .card-wrapper .card.active.turn {
+	-webkit-animation: cardTurn 0.5s linear 1;
+	animation: cardTurn 0.5s linear 1;
+	-webkit-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+}
+
+#db-content .poker-table .card-wrapper .card.shake {
+	-webkit-animation: cardShake .8s linear infinite;
+	animation: cardShake .8s linear infinite
+}
+
+#db-content .poker-table .card-wrapper .card.init {
+	top: 1.15rem!important;
+	left: 36%!important;
+	-webkit-transform: translate(0,0)!important;
+	transform: translate(0,0)!important
+}
+
+#db-content .prize-list {
+	box-sizing: border-box;
+	height: .75rem;
+	margin-top: 0.22rem;
+}
+.prize-tag {
+    /*position: absolute;*/
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 1.6em;
+    line-height: 1.4em;
+    color: #f5f2a4;
+	/*background-image: url(../img/regard.png) !important;
+	background-repeat: no-repeat;
+    background-size: 100% 100%;*/
+}
+
+@-webkit-keyframes cardShake {
+	100%,30% {
+		-webkit-transform: translate(-50%,0) scale(1.5,1.5) rotate(0);
+		transform: translate(-50%,0) scale(1.5,1.5) rotate(0)
+	}
+
+	40%,60%,80% {
+		-webkit-transform: translate(-50%,0) scale(1.5,1.5) rotate(10deg);
+		transform: translate(-50%,0) scale(1.5,1.5) rotate(10deg)
+	}
+
+	50%,70%,90% {
+		-webkit-transform: translate(-50%,0) scale(1.5,1.5) rotate(-10deg);
+		transform: translate(-50%,0) scale(1.5,1.5) rotate(-10deg)
+	}
+}
+
+@keyframes cardShake {
+	100%,30% {
+		-webkit-transform: translate(-50%,0) scale(1.5,1.5) rotate(0);
+		transform: translate(-50%,0) scale(1.5,1.5) rotate(0)
+	}
+
+	40%,60%,80% {
+		-webkit-transform: translate(-50%,0) scale(1.5,1.5) rotate(10deg);
+		transform: translate(-50%,0) scale(1.5,1.5) rotate(10deg)
+	}
+
+	50%,70%,90% {
+		-webkit-transform: translate(-50%,0) scale(1.5,1.5) rotate(-10deg);
+		transform: translate(-50%,0) scale(1.5,1.5) rotate(-10deg)
+	}
+}
+@-webkit-keyframes cardShake2 {
+	50% {
+		-webkit-transform:  rotate(-20deg);
+		transform:  rotate(-20deg)
+	}
+
+	100% {
+		-webkit-transform:  rotate(20deg);
+		transform: rotate(20deg)
+	}
+}
+
+@keyframes cardShake2 {
+	50% {
+		-webkit-transform:  rotate(-20deg);
+		transform:  rotate(-20deg)
+	}
+
+	100% {
+		-webkit-transform:  rotate(20deg);
+		transform: rotate(20deg)
+	}
+}
+
+@-webkit-keyframes cardTurn {
+	from {
+		-webkit-transform: translate(-50%,0) scale(1.5,1.5);
+		transform: translate(-50%,0) scale(1.5,1.5)
+	}
+
+	to {
+		-webkit-transform: translate(-50%,0) scale(1.5,1.5) rotateY(-90deg);
+		transform: translate(-50%,0) scale(1.5,1.5) rotateY(-90deg)
+	}
+}
+
+@keyframes cardTurn {
+	from {
+		-webkit-transform: translate(-50%,0) scale(1.5,1.5);
+		transform: translate(-50%,0) scale(1.5,1.5)
+	}
+
+	to {
+		-webkit-transform: translate(-50%,0) scale(1.5,1.5) rotateY(-90deg);
+		transform: translate(-50%,0) scale(1.5,1.5) rotateY(-90deg)
+	}
+}
+
+.three .card {
+	top: .5rem
+}
+
+.three .card:nth-child(1) {
+	z-index: 4;
+	left: 8%
+}
+
+.three .card:nth-child(2) {
+	z-index: 3;
+	left: 50%;
+	-webkit-transform: translate(-50%,0);
+	transform: translate(-50%,0)
+}
+
+.three .card:nth-child(3) {
+	z-index: 2;
+	left: 68%
+}
+
+.four .card:nth-child(1) {
+	z-index: 5;
+	top: .1rem;
+	left: 18%
+}
+
+.four .card:nth-child(2) {
+	z-index: 4;
+	top: .1rem;
+	left: 58%
+}
+
+.four .card:nth-child(3) {
+	z-index: 3;
+	top: 1.1915rem;
+	left: 18%
+}
+
+.four .card:nth-child(4) {
+	z-index: 2;
+	top: 1.1915rem;
+	left: 58%
+}
+
+.five .card:nth-child(1) {
+	z-index: 6;
+	top: .1rem;
+	left: 18%
+}
+
+.five .card:nth-child(2) {
+	z-index: 5;
+	top: .1rem;
+	left: 58%
+}
+
+.five .card:nth-child(3) {
+	z-index: 4;
+	top: 1.1915rem;
+	left: 8%
+}
+
+.five .card:nth-child(4) {
+	z-index: 3;
+	top: 1.1915rem;
+	left: 50%;
+	-webkit-transform: translate(-50%,0);
+	transform: translate(-50%,0)
+}
+
+.five .card:nth-child(5) {
+	z-index: 2;
+	top: 1.1915rem;
+	left: 68%
+}
+/*1*/
+.six .card:nth-child(3) {
+	z-index: 6;
+	top: 0rem;
+	left: 10%;
+	/*background-image: url(../img/turnCard/card2@2x.png) !important;*/
+}
+/*.card:nth-child(3).light {
+	background-image: url(../img/turnCard/after/card3@2x.png) !important;
+}*/
+/*2*/
+.six .card:nth-child(4) {
+	z-index: 5;
+	top: 0rem;
+	left: 36%;
+	/*background-image: url(../img/turnCard/card3@2x.png) !important;*/
+	/*-webkit-transform: translate(-50%,0);
+	transform: translate(-50%,0)*/
+}
+/*.card:nth-child(4).light {
+	background-image: url(../img/turnCard/after/card1@2x.png) !important;
+}*/
+/*3*/
+.six .card:nth-child(5) {
+	z-index: 4;
+	top: 0rem;
+	left: 62%;
+	/*background-image: url(../img/turnCard/card4@2x.png) !important;*/
+}
+/*.card:nth-child(5).light {
+	background-image: url(../img/turnCard/after/card1@2x.png) !important;
+}*/
+
+/*4*/
+.six .card:nth-child(6) {
+	z-index: 3;
+	top: 1.15rem;
+	left: 62%;
+	/*background-image: url(../img/turnCard/card5@2x.png) !important;*/
+}
+/*.card:nth-child(6).light {
+	background-image: url(../img/turnCard/after/card1@2x.png) !important;
+}*/
+/*5*/
+.six .card:nth-child(1) {
+	z-index: 2;
+	top: 1.15rem;
+	left: 36%;
+	/*background-image: url(../img/turnCard/card0@2x.png) !important;*/
+	/*-webkit-transform: translate(-50%,0);
+	transform: translate(-50%,0)*/
+}
+/*.six .card:nth-child(1).light {
+	background-image: url(../img/turnCard/after/card1@2x.png) !important;
+}*/
+/*6*/
+.six .card:nth-child(2) {
+	z-index: 7;
+	top: 1.15rem;
+	left: 10%;
+	/*background-image: url(../img/turnCard/card1@2x.png) !important;*/
+}
+/*.card:nth-child(2).light {
+	background-image: url(../img/turnCard/after/card3@2x.png) !important;
+}*/
+#needCredits {
+	line-height: 1.5;
+	position: absolute;
+	bottom: 2.3rem;
+	right: 0;
+	left: 0;
+	display: inline-block;
+	width: 1.2rem;
+	margin: 0 auto;
+	padding: 0 .1rem;
+	font-weight: normal;
+}
+#needCredits .leftTime { 
+   color: #6b1f1f; 
+   font-size: 0.18rem;
+   font-weight: normal;
+   padding: 0 2px 0 2px;
+}
+
+#prize-list .iScrollLoneScrollbar,.card-cover {
+	display: none
+}
+
+#prize-list {
+	position: relative;
+	overflow: hidden;
+	-ms-touch-action: none;
+	touch-action: none
+}
+
+#prize-list .prize-img {
+	width: 80%;
+	display: block;
+	margin: 0px auto;
+}
+
+#prize-list .prize-name {
+	font-size: .1rem;
+	line-height: .12rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: none;
+	padding-top: 0.025rem;
+}
+
+#prize-list .prize-img-box {
+	padding: 0;
+}
+
+#prize-list .prize-item {
+	display: inline-block; 
+	width: 23.5%;
+	margin: 0px auto;
+	/*margin-right: 0.1rem;*/
+	text-align: center;
+}
+
+.apple {
+	line-height: .19rem
+}
+
+.card-cover {
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.65)
+}
+
+/* 换肤替换 */
+body {
+	background-color: #a4040e !important;
+}
+
+#db-content {
+	background-image: url(../img/turnCard/bg2.jpg) !important;
+}
+
+#db-content .banner .card-shake {
+	background-image: url(../img/turnCard/cardShake.png) !important;	
+}
+.record {
+	background-image: url(../img/turnCard/t-award@2x.png) !important;
+}
+
+.rule {
+	background-image: url(../img/turnCard/t-rule@2x.png) !important;
+}
+
+.apple {
+	background-color: #e69c32 !important;
+}
+
+.apple {
+	color: #fff !important;
+}
+
+
+.rule-modal .rule-modal-dialog section .probability .nav i{     
+    border-top-color: #fff;
+	border-left-color: #fff;
+}
+.rule-modal .rule-modal-dialog {
+	/*background-color: #c22235 !important;*/
+	background: url(../img/turnCard/rule-bg.png) no-repeat scroll left top;
+	background-size: 100% 100%;
+}
+
+.rule-modal .rule-modal-dialog section .probability {
+	background-color: #167a34 !important;
+}
+
+.rule-modal .rule-modal-dialog header span,.rule-modal .rule-modal-dialog section .description {
+	color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog header i {
+	background-color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog .close {
+	color: #fff !important;
+	background: url(../img/turnCard/close6.png) no-repeat;
+    background-size: 0.25rem 0.25rem;
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav {
+	/*background-color: #d42d41 !important;*/
+}
+
+.rule-modal .rule-modal-dialog section .probability .nav span {
+	color: #fff !important;
+}
+
+.rule-modal .rule-modal-dialog section .probability.active .text {
+	color: #fff !important;
+}
+.prize-tag {
+	/*background-image: url(../img/turnCard/regard.png) !important;*/
+}
+
+
